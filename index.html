@@ -20,6 +20,25 @@
                 p {text-align: center;}
                 div {text-align: center;}
                 </style>
+		<script>
+		    async function trackVisit() {
+		        const response = await fetch("http://127.0.0.1:8000/track", {  
+		            method: "POST",
+		            headers: { "Content-Type": "application/json" },
+		            body: JSON.stringify({
+		                url: window.location.href,        // Track visited URL
+		                userAgent: navigator.userAgent,  // Track browser/device info
+		                referrer: document.referrer,     // Track where the user came from
+		                timestamp: new Date().toISOString() // Capture visit time
+		            })
+		        });
+		        const data = await response.json();
+		        console.log("Visit tracked:", data);
+		    }
+		
+		    // Run the tracking function when the page loads
+		    trackVisit();
+		</script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
