@@ -22,22 +22,26 @@
                 </style>
 		<script>
 		    async function trackVisit() {
-		        const response = await fetch("https://fastapi-tracker-472812449256.us-central1.run.app//track", {  
-		            method: "POST",
-		            headers: { "Content-Type": "application/json" },
-		            body: JSON.stringify({
-		                url: window.location.href,       
-		                userAgent: navigator.userAgent,  
-		                referrer: document.referrer,    
-		                timestamp: new Date().toISOString()
-		            })
-		        });
+		        try {
+		            const response = await fetch("https://fastapi-tracker-472812449256.us-central1.run.app/track", {  // Use your Cloud Run API URL
+		                method: "POST",
+		                headers: { "Content-Type": "application/json" },
+		                body: JSON.stringify({
+		                    url: window.location.href,       
+		                    userAgent: navigator.userAgent,  
+		                    referrer: document.referrer,    
+		                    timestamp: new Date().toISOString()
+		                })
+		            });
 		
-		        if (!response.ok) {
-		            console.error("Tracking failed:", response.statusText);
-		        } else {
-		            const data = await response.json();
-		            console.log("Visit tracked:", data);
+		            if (!response.ok) {
+		                console.error("Tracking failed:", response.statusText);
+		            } else {
+		                const data = await response.json();
+		                console.log("Visit tracked:", data);
+		            }
+		        } catch (error) {
+		            console.error("Error tracking visit:", error);
 		        }
 		    }
 		
