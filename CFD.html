@@ -1,415 +1,309 @@
-<!DOCTYPE HTML>
-<!--
-	Pasha
-        S.pavar@hotmail.com
-        <p>However, after a while I notice that if I pretend that will face with less consequence.</p>
--->
-<html>
-	<head> 
-		<title> CFD </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-                h1 {text-align: center;}
-  	        h2 {text-align: center;}
-		h3 {text-align: center;}
-                p {text-align: center;}
-                div {text-align: center;}
-                </style>
-	</head>
-	<body class="right-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CFD — Saeed Parvar</title>
+  <meta name="description" content="Computational Fluid Dynamics projects: detonation, LES/DNS/RANS, non‑Newtonian & EVP flows, porous media, modal decomposition, and natural convection." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08) }
+    body{ margin:0 }
 
-			<!-- Header -->
-				<div id="header">
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Computational Fluid Dynamics</a></h1>
-							</header>
-						</div>
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
 
-					<!-- Nav -->
-						<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Education.html">Education</a></li>
-							<li><a href="CFD.html">CFD</a></li>
-							<li><a href="Skill.html">Skills</a></li>
-							<li><a href="Hobbies.html">Hobbies</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-							<li><a href="BBQ.html"> BBQ </a></li>
-							<li><a href="Contact.html">Contact Me</a></li>
-						</ul>
-					</nav>
-				</div>
+    main{ max-width:1200px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 22px; color:var(--muted) }
 
-			<!-- Main -->
-	    	        <div class="wrapper style1">
-			<section id="features" class="container special">
-				<header>
-					<h3> In my role as a CFD engineer, I've had the opportunity to engage in a diverse range of intriguing projects, </h3>
- 					<h3> including simulating gaseous detonation, developing turbulence models,  </h3>
-					<h3> and investigating the behavior of non-Newtonian fluids around cylinders and porous media.  </h3>
-				</header>
-				<div class="row">
+    .section{ margin: 30px 0 }
+    .section h2{ font-size: clamp(20px,2vw,26px); margin: 0 0 10px }
+    .section p{ color: var(--muted); margin: 0 0 14px }
 
-				<style>
-				    .row + .spacer {
-					margin-top: 30px; /* Adjust the value to control the spacing */
-				    }
-				</style>
-					<article class="col-6 col-12-mobile special">
-						<h3><a href="https:/www.researchgate.net/publication/273862820_Hydrodynamic_instabilities_and_transverse_waves_in_propagation_mechanism_of_gaseous_detonations">Regular Cells Structure</a></h3>
-						<a href="#" class="image featured"><img src="Proj/Detonation_I.jpg" alt="" style="max-height: 300px;" /></a>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					
-					<article class="col-6 col-12-mobile special">
-						<h3><a href="https:/www.researchgate.net/publication/273862820_Hydrodynamic_instabilities_and_transverse_waves_in_propagation_mechanism_of_gaseous_detonations">Irregular Cells Structure</a></h3>
-						<a href="#" class="image featured"><img src="Proj/Detonation_II.jpg" alt="" style="max-height: 300px;"/></a>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				
-				<style>
-				    .row + .spacer {
-					margin-top: 20px; /* Adjust the value to control the spacing */
-				    }
-				</style>
+    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) }
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column }
+    .card img{ width:100%; aspect-ratio: 16/10; object-fit:cover; display:block }
+    .card video{ width:100%; aspect-ratio: 16/10; display:block }
+    .card .body{ padding:12px 14px }
+    .card h3{ margin:0 0 6px; font-size:18px }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
+    .meta{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+    .pill{ border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
 
-				<div class="row">	
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					    <video width="330" height="280" controls>
-					        <source src="Proj/Deton_Density.mp4" type="video/mp4">
-					    </video>
-					    <h4> Gaseous Detonation Density Contour </h4>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					    <video width="330" height="280" controls>
-					        <source src="Proj/Deton_Temp.mp4" type="video/mp4">
-					    </video>
-					    <h4> Gaseous Detonation temperature Contour </h4>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					    <video width="330" height="280" controls>
-					        <source src="Proj/Deton_Pocket.mp4" type="video/mp4">
-					    </video>
-					   <h4> Gaseous Detonation unburnt pockets </h4>
-					</article>	
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					    <video width="330" height="280" controls>
-					        <source src="Proj/Deton_Cell.mp4" type="video/mp4">
-					    </video>						
-					    <h4> Gaseous Detonation celluar structure </h4>
-					</article>
-				</div>
-				<hr/>
-				<div class="row">
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-						<img src="Proj/V1.jpg" alt="Image 1">
-						<h4> Velocity contour </h4>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-						<img src="Proj/V2.jpg" alt="Image 2">
-						<h4> Velocity contour </h4>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-						<img src="Proj/Rho1.jpg" alt="Image 3">
-						<h4> Density contour </h4>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-						<img src="Proj/Rho2.jpg" alt="Image 4">
-						<h4> Density contour </h4>
-					</article>
-				</div>
-				<hr/>
-				<div class="row">	
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					</article>
-					<article class="col-6 col-12-mobile special" style="text-align: center;">
-					    <h4> Kelvin Helmholtz Instability </h4>
-					    <video width="480" height="360" controls>
-					        <source src="Proj/Kelvin_Hel.mp4" type="video/mp4">
-					    </video>
-					</article>
-					<article class="col-3 col-12-mobile special" style="text-align: center;">
-					</article>	
-				</div>
-				<hr/>
-				<div class="row">
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/MM_I.png" alt="" style="max-height: 380px;" /></a>
-						<h3><a href="https://www.researchgate.net/publication/313939340_Simulation_of_compressible_multi_material_flow_by_2D_hydrodynamic_code">Single material and multi materials algorithm</a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/MM_II.png" alt="" style="max-height: 380px;" /></a>
-						<h3><a href="https://www.researchgate.net/publication/313939340_Simulation_of_compressible_multi_material_flow_by_2D_hydrodynamic_code">Schlieren of bubble in times</a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/MM_III.png" alt="" /></a>
-						<h3><a href="https://www.researchgate.net/publication/313939340_Simulation_of_compressible_multi_material_flow_by_2D_hydrodynamic_code"> Contour of density</a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<div class="row">
-					<article class="col-1 col-12-mobile special" style="text-align: center;">
-					</article>
-					<article class="col-4 col-12-mobile special" style="text-align: center;">
-					    <h4> Density Countour </h4>
-					    <video width="480" height="360" controls>
-					        <source src="Proj/Bubble_Density.mp4" type="video/mp4">
-					    </video>
-					</article>
-					<article class="col-2 col-12-mobile special" style="text-align: center;">
-					</article>
-					<article class="col-4 col-12-mobile special" style="text-align: center;">
-					    <h4> Bubble deformation </h4>
-					    <video width="480" height="360" controls>
-					        <source src="Proj/Bubble_Gamma.mp4" type="video/mp4">
-					    </video>
-					</article>	
-					<article class="col-1 col-12-mobile special" style="text-align: center;">
-					</article>
-				</div>
-				<hr/>
-				<div class="row">
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/LES_I.png" alt="" style="max-height: 380px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/354788145_LES_models_for_wall-free_turbulent_flows_of_viscoelastic_FENE-P_fluids"> DNS, LES and RANS Comparison</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/LES_II.png" alt="" style="max-height: 380px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/354788145_LES_models_for_wall-free_turbulent_flows_of_viscoelastic_FENE-P_fluids"> The contours of instantaneous vorticity </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/LES_III.png" alt="" style="max-height: 380px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/354788145_LES_models_for_wall-free_turbulent_flows_of_viscoelastic_FENE-P_fluids"> Evolution of the shear layer thickness</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<hr/>
-				<div class="row">
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH1_1.png" alt="" style="max-height: 380px;" /></a>
-						<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> Newtonian Fluid </a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH1_2.png" alt="" style="max-height: 380px;" /></a>
-						<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> EVP Fluids Shear Thinning </a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH1_3.png" alt="" style="max-height: 380px;" /></a>
-						<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> EVP Shear Thickening </a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<hr/>
+    figure.inline{ margin:0; background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden }
+    figure.inline img{ width:100%; display:block; aspect-ratio: 16/10; object-fit:cover }
+    figure.inline figcaption{ padding:10px 12px; color:var(--muted) }
 
+    .center{ text-align:center }
 
-				<div class="row">
-					<article class="col-3 col-12-mobile special">
-						
-					</article>
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>Computational Fluid Dynamics</h1>
+    <p>Selected projects in detonation, turbulence modeling, non‑Newtonian & elastoviscoplastic flows, porous media, and heat transfer.</p>
+  </header>
 
-					<article class="col-6 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/ET.jpeg" alt="" /></a>
-				    	        <h3><a href="https://www.linkedin.com/posts/saeed-parvar_eurohpc-regularaccessgrant-elastoviscoplasticity-activity-7038806909218430979-QJ0O/?utm_source=share&utm_medium=member_desktop"> Elastic Turbulence </a></h3>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html" aria-current="page">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
 
-					<article class="col-3 col-12-mobile special">
-					</article>
+  <main role="main">
+    <p class="lede">From DNS/LES/RANS comparisons to EVP flows around bluff bodies and porous media, here’s a compact look at my research and simulations.</p>
 
-				</div>
-				<hr/>
+    <!-- Detonation -->
+    <section class="section" aria-labelledby="det-title">
+      <h2 id="det-title">Gaseous Detonation</h2>
+      <p>Regular vs. irregular cell structures, unburnt pockets, and shock dynamics. See <a href="https://www.researchgate.net/publication/273862820_Hydrodynamic_instabilities_and_transverse_waves_in_propagation_mechanism_of_gaseous_detonations" target="_blank" rel="noopener">paper</a>.</p>
+      <div class="grid">
+        <article class="card">
+          <a href="https://www.researchgate.net/publication/273862820_Hydrodynamic_instabilities_and_transverse_waves_in_propagation_mechanism_of_gaseous_detonations" target="_blank" rel="noopener"><img src="Proj/Detonation_I.jpg" alt="Regular detonation cell structure" loading="lazy" decoding="async" /></a>
+          <div class="body">
+            <h3>Regular cells</h3>
+            <p>Shock front with periodic cellular patterns.</p>
+            <div class="meta"><span class="pill">Shock dynamics</span><span class="pill">H₂/O₂ models</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <a href="https://www.researchgate.net/publication/273862820_Hydrodynamic_instabilities_and_transverse_waves_in_propagation_mechanism_of_gaseous_detonations" target="_blank" rel="noopener"><img src="Proj/Detonation_II.jpg" alt="Irregular detonation cell structure" loading="lazy" decoding="async" /></a>
+          <div class="body">
+            <h3>Irregular cells</h3>
+            <p>Break-up of periodicity; transverse wave interactions.</p>
+            <div class="meta"><span class="pill">Instabilities</span><span class="pill">Transverse waves</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata" poster="Proj/V1.jpg">
+            <source src="Proj/Deton_Density.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Density contour</h3>
+            <p>Evolution of the reaction front.</p>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata" poster="Proj/V2.jpg">
+            <source src="Proj/Deton_Temp.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Temperature field</h3>
+            <p>Thermal structure across the wave.</p>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata" poster="Proj/Rho1.jpg">
+            <source src="Proj/Deton_Pocket.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Unburnt pockets</h3>
+            <p>Pocket formation and consumption.</p>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata" poster="Proj/Rho2.jpg">
+            <source src="Proj/Deton_Cell.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Cellular structure</h3>
+            <p>Cell growth and merging.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <!-- Kelvin–Helmholtz -->
+    <section class="section" aria-labelledby="kh-title">
+      <h2 id="kh-title">Kelvin–Helmholtz Instability</h2>
+      <div class="grid">
+        <article class="card">
+          <video controls preload="metadata" poster="Proj/V1.jpg">
+            <source src="Proj/Kelvin_Hel.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Roll‑up dynamics</h3>
+            <p>Shear‑layer roll‑up and vortex pairing.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <!-- Multi‑material shock/bubble -->
+    <section class="section" aria-labelledby="mm-title">
+      <h2 id="mm-title">Compressible Multi‑Material Flow</h2>
+      <p>2D hydrodynamic code with material interfaces (Level‑Set/VOF). <a href="https://www.researchgate.net/publication/313939340_Simulation_of_compressible_multi_material_flow_by_2D_hydrodynamic_code" target="_blank" rel="noopener">Paper</a>.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="Proj/MM_I.png" alt="Single and multi‑material algorithm schematic" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Algorithms</h3>
+            <p>Single vs. multi‑material interface treatment.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/MM_II.png" alt="Schlieren sequence of a bubble" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Schlieren</h3>
+            <p>Shock–bubble interaction over time.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/MM_III.png" alt="Density contours for bubble case" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Density contours</h3>
+            <p>Compression/expansion phases.</p>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata">
+            <source src="Proj/Bubble_Density.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Density field (video)</h3>
+            <p>Bubble deformation under shock.</p>
+          </div>
+        </article>
+        <article class="card">
+          <video controls preload="metadata">
+            <source src="Proj/Bubble_Gamma.mp4" type="video/mp4" />
+          </video>
+          <div class="body">
+            <h3>Gas fraction (video)</h3>
+            <p>Interface topology evolution.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <!-- LES / DNS / RANS -->
+    <section class="section" aria-labelledby="les-title">
+      <h2 id="les-title">DNS · LES · RANS</h2>
+      <p>Viscoelastic FENE‑P jet/mixing‑layer studies and subgrid modeling. <a href="https://www.researchgate.net/publication/354788145_LES_models_for_wall-free_turbulent_flows_of_viscoelastic_FENE-P_fluids" target="_blank" rel="noopener">Paper</a>.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="Proj/LES_I.png" alt="DNS/LES/RANS comparison" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Comparisons</h3>
+            <p>Accuracy vs. cost across models.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/LES_II.png" alt="Instantaneous vorticity contours" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Instantaneous vorticity</h3>
+            <p>Shear‑layer structures.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/LES_III.png" alt="Shear layer thickness evolution" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Shear‑layer thickness</h3>
+            <p>Growth vs. model choice.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-				
+    <!-- EVP around cylinder / Elastic turbulence / Modal decomposition / Porous / Natural convection -->
+    <section class="section" aria-labelledby="evp-title">
+      <h2 id="evp-title">Non‑Newtonian & EVP Flows</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="Proj/KTH1_1.png" alt="Newtonian flow around a cylinder" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Newtonian cylinder</h3>
+            <p>Baseline bluff‑body flow.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH1_2.png" alt="EVP shear‑thinning flow around a cylinder" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>EVP — shear‑thinning</h3>
+            <p>Yield‑stress effects & drag.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH1_3.png" alt="EVP shear‑thickening flow around a cylinder" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>EVP — shear‑thickening</h3>
+            <p>Vortex shedding alteration.</p>
+          </div>
+        </article>
+        <article class="card">
+          <a href="https://www.linkedin.com/posts/saeed-parvar_eurohpc-regularaccessgrant-elastoviscoplasticity-activity-7038806909218430979-QJ0O/" target="_blank" rel="noopener"><img src="Proj/ET.jpeg" alt="Elastic turbulence visualisation" loading="lazy" decoding="async" /></a>
+          <div class="body">
+            <h3>Elastic turbulence</h3>
+            <p>EuroHPC regular access results.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH2_1.png" alt="POD modes example" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>POD modes</h3>
+            <p>Low‑rank structures.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH2_2.png" alt="DMD modes example" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>DMD modes</h3>
+            <p>Frequency‑resolved dynamics.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH3.png" alt="Flow through randomised porous media" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Porous media</h3>
+            <p>Hydrodynamics in randomised structures.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH4_1.png" alt="Natural convection velocity field" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Natural convection — velocity</h3>
+            <p>Buoyancy‑driven circulation.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Proj/KTH4_2.png" alt="Natural convection temperature field" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Natural convection — temperature</h3>
+            <p>Thermal plumes & stratification.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-				
-				<div class="row">
-					<article class="col-6 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH2_1.png" alt=""  /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> POD Modes </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-6 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH2_2.png" alt=""  /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> DMD Modes </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<hr/>
+  </main>
 
-				<div class="row">
-					<article class="col-12 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH3.png" alt="" style="max-height: 380px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/373141784_General_hydrodynamic_features_of_elastoviscoplastic_fluid_flows_through_randomised_porous_media"> Flow Past Porous Media </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<hr/>
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.researchgate.net/profile/Saeed-Parvar/research" target="_blank" rel="noopener">Publications</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
 
-				<div class="row">
-					<article class="col-2 col-12-mobile special">
-						
-					</article>
-					
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH4_1.png" alt="" style="max-height: 500px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> Natural Convection (Velocity) </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-4 col-12-mobile special">
-						<a href="#" class="image featured"><img src="Proj/KTH4_2.png" alt="" style="max-height: 500px;" /></a>
-						<header>
-							<h3><a href="https://www.researchgate.net/publication/369300608_Elastoviscoplastic_fluid_flow_past_a_circular_cylinder"> Natural Convection (Temperature) </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-
-					<article class="col-2 col-12-mobile special">
-					</article>
-
-				</div>
-				<!--<hr/>-->
-				
-			</section>
-			</div>
-
-			<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3> Please follow me at </h3>
-										</header>
-										<ul class="icons">
-											<li><a href="https://twitter.com/saeed_parvar" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.facebook.com/pasha.00313/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="https://www.instagram.com/pasha.00777/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.researchgate.net/profile/Saeed-Parvar" class="icon brands fa-researchgate"><span class="label">Reseachgate</span></a></li>
-											<li><a href="https://github.com/Pasha0313/Saeed" class="icon brands fa-github"><span class="label">Github</span></a></li>
-											<li><a href="https://www.linkedin.com/in/saeed-parvar/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
-
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://pasha0313.github.io/Saeed/index.html"> Saeed Parvar</a></li>
-										</ul>
-									</div>
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
