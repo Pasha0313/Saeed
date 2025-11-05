@@ -3136,3 +3136,146 @@ input, select, textarea {
 					}
 
 	}
+
+
+
+/* === Dark theme overrides (drop at end of main.css) === */
+:root{
+  --bg: #0d1117;           /* page background */
+  --panel: #161b22;        /* cards/sections */
+  --text: #e6edf3;         /* primary text */
+  --muted: #9da7b3;        /* secondary text */
+  --line: rgba(255,255,255,0.12);
+  --accent: #58a6ff;       /* links, hovers */
+  --accent-2: #ef8376;     /* keep Helios button color */
+}
+
+/* Base */
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Headings & strong text */
+h1, h2, h3, h4, h5, h6,
+strong, b {
+  color: #ffffff !important;
+}
+
+/* Links */
+a {
+  color: var(--accent) !important;
+  border-bottom-color: rgba(88,166,255,0.25) !important;
+}
+a:hover {
+  color: #9cc8ff !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Sections / “cards” */
+.wrapper {
+  background: var(--panel) !important;
+}
+section, article {
+  color: var(--text) !important;
+}
+
+/* Header hero image readability */
+#header {
+  color: #fff !important;
+}
+#header:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55));
+  pointer-events: none;
+}
+
+/* Nav */
+#nav > ul > li.active {
+  border-color: var(--line) !important;
+}
+#nav > ul > li > a,
+#nav > ul > li > span {
+  color: #e6edf3 !important;
+}
+.dropotron {
+  background: #0f141b !important;
+  color: var(--text) !important;
+}
+.dropotron li {
+  color: var(--text) !important;
+  border-top-color: var(--line) !important;
+}
+.dropotron li:hover { color: var(--accent-2) !important; }
+
+/* Footer already dark; just soften copy color */
+#footer .copyright,
+.timestamp { color: var(--muted) !important; }
+
+/* Rules & borders */
+hr {
+  border-top-color: var(--line) !important;
+  border-bottom-color: var(--line) !important;
+}
+hr:before, hr:after { background: var(--line) !important; }
+
+/* Tables */
+table.default thead,
+table.default tfoot {
+  border-color: var(--line) !important;
+}
+table.default tbody tr { border-top-color: var(--line) !important; }
+table.default tbody tr:nth-child(2n+1) { background: rgba(255,255,255,0.03) !important; }
+table.default th, table.default td { color: var(--text) !important; }
+
+/* Forms */
+form label { color: #fff !important; }
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  background: #0f141b !important;
+  border-color: var(--line) !important;
+  color: var(--text) !important;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+  background: #0f141b !important;
+  border-color: var(--accent) !important;
+}
+
+/* Buttons (keep Helios style but ensure contrast) */
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+  background: var(--accent-2) !important;
+  color: #fff !important;
+}
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+  background: #f29a91 !important;
+}
+
+/* Icon pill strip */
+ul.icons {
+  background: rgba(255,255,255,0.07) !important;
+}
+
+/* Carousel cards */
+.carousel article {
+  background: var(--panel) !important;
+}
+
+/* Optional: respect user OS dark setting without touching light theme
+   (wrap everything above under prefers-color-scheme if you only want it when OS is dark)
+@media (prefers-color-scheme: dark) { ...paste overrides here... }
+*/
