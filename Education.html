@@ -1,149 +1,170 @@
-<!DOCTYPE HTML>
-<!--
-        Pasha 
-	s.parvar@hotmail.com
-        <a href="#" class="image featured"><img src="images/IMP-edu.png" alt="" /></a>
-        <hr/>
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Education</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style>
-	h1 {text-align: center;}
-	h2 {text-align: center;}
-	h3 {text-align: center;}
-	p {text-align: center;}
-	div {text-align: center;}
-	</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education — Saeed Parvar</title>
+  <meta name="description" content="Education timeline — KTH postdoc, FEUP PhD, TMU MSc, University of Guilan BSc." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08) }
+    body{ margin:0 }
+
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
+
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
+
+    main{ max-width:1100px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 18px; color:var(--muted) }
+
+    .cv{ text-align:center; margin: 10px 0 26px }
+    .cv a{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); text-decoration:none }
+
+    .timeline{ position:relative; margin: 24px 0 }
+    .timeline::before{ content:""; position:absolute; left:calc(50% - 1px); top:0; bottom:0; width:2px; background:var(--border) }
+    .entry{ display:grid; grid-template-columns: 1fr 1fr; gap:18px; align-items:stretch; margin: 0 0 26px }
+    .entry:nth-child(even){ direction: rtl }
+    .entry:nth-child(even) > *{ direction: ltr }
+
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:14px; display:flex; gap:12px }
+    .logo{ width:72px; height:72px; border-radius:12px; background:#111; flex:0 0 72px; display:grid; place-items:center; overflow:hidden }
+    .logo img{ width:100%; height:100%; object-fit:contain }
+    .card h3{ margin:0 0 6px; font-size:18px }
+    .card p{ margin:0; color:var(--muted) }
+
+    .meta{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+    .pill{ border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
+    .sup{ margin-top:8px }
+
+    @media (max-width: 800px){
+      .timeline::before{ left: 10px }
+      .entry{ grid-template-columns: 1fr; }
+    }
+
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
 </head>
-<body class="left-sidebar is-preload">
-	<div id="page-wrapper">
-	<!-- Header -->
-			<div id="header">
-     				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="Education"> Education </a></h1>
-						</header>
-					</div>
+<body>
+  <header class="site" role="banner">
+    <h1>Education</h1>
+    <p>Postdoc at KTH • PhD at FEUP • MSc at TMU • BSc at University of Guilan</p>
+  </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Education.html">Education</a></li>
-							<li><a href="CFD.html">CFD</a></li>
-							<li><a href="Skill.html">Skills</a></li>
-							<li><a href="Hobbies.html">Hobbies</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-							<li><a href="BBQ.html"> BBQ </a></li>
-							<li><a href="Contact.html">Contact Me</a></li>
-						</ul>
-					</nav>
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html" aria-current="page">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
 
-			</div>
+  <main role="main">
+    <p class="lede">A concise timeline with supervisors, topics, and quick links.</p>
+    <p class="cv"><a href="images/Resume_in_Saeed_2023.pdf" download>Download CV (PDF)</a></p>
 
-	<!---- Main ---->
-			<div class="wrapper style1">
-			          <div class="container">
-					<header>
-						<a href="images/Resume_in_Saeed_2023.pdf" download class="button" > Please click to download my CV </a>
-					</header>
-					  <div class="row">
-					       	    <div class="col-2">
-						    	<a href="https://www.kth.se/" class="image fit"><img src="images/KTH.png" alt="" /></a>
-						    </div>
-						    <div class="col-8">
-      		     		                        <h3>KTH Royal Institute of Technology in Stockholm | KTH</h4>
-							<p>Postdoctoral fellow Mechanical Engnineering, 2021-...</p>
-							<a href="https://www.researchgate.net/profile/Outi-Tammisola">Supervisor: Prof. Outi Tammisola.</a></li>   
-							<p>Project   : The study of the instbaility in non-Newtonian fluid.</p>
-					  	    </div>
-					    </div>
-				            <hr/>
-				            <div class="row">
-							 <div class="col-2">
-								<a href="https://sigarra.up.pt/feup/en/web_page.inicial" class="image fit"><img src="images/FEUP.jpg" alt="" /></a>
-							 </div>
-							 <div class="col-8">
-								<h3>Faculdade de Engenharia da Universidade do Porto | FEUP</h4>
-								<p>Ph.D. Mechanical Engnineering, 2018-2021.</p>
-							 	<a href="https://www.researchgate.net/profile/Fernando-Pinho-5"> Supervisor: Prof. Fernando Tavares de Pinho.</a></li>   
-								<p>Thesis    : LES model for inhomogeneous wall-free turbulent flows and flow characteristics in laminar wall-free and wall-dominated viscoelastic fluid flows.</p>
-							 </div>
-					    </div>
-					    <hr/>
-					     <div class="row">
-							<div class="col-2">
-								<a href="http://www.modares.ac.ir/" class="image fit"><img src="images/TMU.png" alt="" /></a>
-							</div>
-							<div class="col-8">
-								<h3>Tarbiat Modares University | TMU</h4>
-								<p>Ms. Aerospace Engnineering, 2007-2010.</p>
-								<a href="https://www.researchgate.net/profile/Kiumars-Mazaheri"> Supervisor: Prof. Kiumars Mazaheri.</a></li>   
-								<p>Thesis    : Non-reflecting boundary conditon on detonation simulation.</p>
- 							</div>
-      					    </div>
-					    <hr/>
-					    <div class="row">
-							<div class="col-2">
-								<a href="https://guilan.ac.ir/en/home" class="image fit"><img src="images/Guilan.jpg" alt="" /></a>
-							</div>
-							<div class="col-8">
-								<h3>University of Guilan</h4>
-								<p>Bs. Mechancial Engnineering, 2002-2007.</p>
-								<p>Thesis    : Tidal Power system.</p>
-							</div>
-					     </div>
-					     </div>
-				</div>
-		                </div>
-	<!---- Footer ---->
-				<div id="footer">
-					<div class="container">
+    <div class="timeline" aria-label="Education timeline">
 
-						<div class="row">
-						</div>
-						
-						<div class="row">
-						<div class="col-12">
-							<!-- Contact -->
-							<section class="contact">
-								<ul class="icons">
-									<li><a href="https://twitter.com/saeed_parvar" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/pasha.00313/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/pasha.00777/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.researchgate.net/profile/Saeed-Parvar" class="icon brands fa-researchgate"><span class="label">Reseachgate</span></a></li>
-									<li><a href="https://github.com/Pasha0313/Saeed" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.linkedin.com/in/saeed-parvar/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-								</ul>
-							</section>
-							<!-- Copyright -->
-							<div class="copyright">
-								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://pasha0313.github.io/Saeed/index.html"> Saeed Parvar</a></li>
-								</ul>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-	 				
-               </div>					
-	</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- KTH Postdoc -->
+      <section class="entry" aria-labelledby="kth-title">
+        <div></div>
+        <article class="card" role="article">
+          <div class="logo"><a href="https://www.kth.se/" target="_blank" rel="noopener"><img src="images/KTH.png" alt="KTH logo" loading="lazy" decoding="async" /></a></div>
+          <div>
+            <h3 id="kth-title">KTH Royal Institute of Technology — Postdoctoral Fellow</h3>
+            <p>Mechanical Engineering • <em>2021 — present</em></p>
+            <div class="meta">
+              <span class="pill">Stockholm</span>
+              <span class="pill">Instability</span>
+              <span class="pill">Non‑Newtonian flows</span>
+            </div>
+            <p class="sup">Supervisor: <a href="https://www.researchgate.net/profile/Outi-Tammisola" target="_blank" rel="noopener">Prof. Outi Tammisola</a></p>
+            <p>Project: Instabilities in viscoelastic/non‑Newtonian flows; modeling & simulation.</p>
+          </div>
+        </article>
+      </section>
 
-	</body>
+      <!-- FEUP PhD -->
+      <section class="entry" aria-labelledby="feup-title">
+        <div></div>
+        <article class="card" role="article">
+          <div class="logo"><a href="https://sigarra.up.pt/feup/en/web_page.inicial" target="_blank" rel="noopener"><img src="images/FEUP.jpg" alt="FEUP logo" loading="lazy" decoding="async" /></a></div>
+          <div>
+            <h3 id="feup-title">FEUP — Faculdade de Engenharia da Universidade do Porto — PhD</h3>
+            <p>Mechanical Engineering • <em>2018 — 2021</em></p>
+            <div class="meta">
+              <span class="pill">Porto</span>
+              <span class="pill">Turbulence</span>
+              <span class="pill">Viscoelastic flows</span>
+              <span class="pill">LES</span>
+            </div>
+            <p class="sup">Supervisor: <a href="https://www.researchgate.net/profile/Fernando-Pinho-5" target="_blank" rel="noopener">Prof. Fernando Tavares de Pinho</a></p>
+            <p>Thesis: LES for inhomogeneous wall‑free turbulent flows and laminar wall‑free / wall‑dominated viscoelastic flows.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- TMU MSc -->
+      <section class="entry" aria-labelledby="tmu-title">
+        <div></div>
+        <article class="card" role="article">
+          <div class="logo"><a href="http://www.modares.ac.ir/" target="_blank" rel="noopener"><img src="images/TMU.png" alt="TMU logo" loading="lazy" decoding="async" /></a></div>
+          <div>
+            <h3 id="tmu-title">Tarbiat Modares University — MSc</h3>
+            <p>Aerospace Engineering • <em>2007 — 2010</em></p>
+            <div class="meta">
+              <span class="pill">Tehran</span>
+              <span class="pill">Detonation</span>
+              <span class="pill">Numerical BCs</span>
+            </div>
+            <p class="sup">Supervisor: <a href="https://www.researchgate.net/profile/Kiumars-Mazaheri" target="_blank" rel="noopener">Prof. Kiumars Mazaheri</a></p>
+            <p>Thesis: Non‑reflecting boundary conditions in detonation simulations.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Guilan BSc -->
+      <section class="entry" aria-labelledby="guilan-title">
+        <div></div>
+        <article class="card" role="article">
+          <div class="logo"><a href="https://guilan.ac.ir/en/home" target="_blank" rel="noopener"><img src="images/Guilan.jpg" alt="University of Guilan logo" loading="lazy" decoding="async" /></a></div>
+          <div>
+            <h3 id="guilan-title">University of Guilan — BSc</h3>
+            <p>Mechanical Engineering • <em>2002 — 2007</em></p>
+            <div class="meta">
+              <span class="pill">Rasht</span>
+              <span class="pill">Energy systems</span>
+            </div>
+            <p>Thesis: Tidal power system.</p>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
