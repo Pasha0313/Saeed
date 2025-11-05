@@ -1,211 +1,163 @@
-<!DOCTYPE HTML>
-<!--
-	Pasha
-        S.pavar@hotmail.com
-        <p>However, after a while I notice that if I pretend that will face with less consequence.</p>
--->
-<html>
-	<head>
-		<title> BBQ </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-                h1 {text-align: center;}
-  	        h2 {text-align: center;}
-		h3 {text-align: center;}
-                p {text-align: center;}
-                div {text-align: center;}
-                </style>
-	</head>
-	<body class="right-sidebar is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BBQ — Saeed Parvar</title>
+  <meta name="description" content="Persian BBQ favourites: Kabab Koobideh, Joojeh, Chenjeh, and Kabab Torsh from northern Iran." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08) }
+    body{ margin:0 }
 
-			<!-- Header -->
-				<div id="header">
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">BBQ</a></h1>
-							</header>
-						</div>
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
 
-					<!-- Nav -->
-						<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Education.html">Education</a></li>
-							<li><a href="CFD.html">CFD</a></li>
-							<li><a href="Skill.html">Skills</a></li>
-							<li><a href="Hobbies.html">Hobbies</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-							<li><a href="BBQ.html"> BBQ </a></li>
-							<li><a href="Contact.html">Contact Me</a></li>
-						</ul>
-					</nav>
-				</div>
+    main{ max-width:1200px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 22px; color:var(--muted) }
 
-			<!-- Main -->
-	    	        <div class="wrapper style1">
-			<section id="features" class="container special">
-				<header>
-					<h3> Coming from an Iranian background, I'm thrilled to share that my family has a knack for preparing a range of delicious kababs.  </h3>
- 					<h3> We're known for our Chenjeh Kabab, Joojeh Kabab, and koobideh Kabab, but our real specialty is the mouthwatering Kabab Torsh from northern Iran. </h3>
- 					<h3>  It's a true culinary gem that we take great pride in serving.</h3>
- 					</header>
-				<div class="row">
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Pre_I.jpg" alt="" /></a>
-						<header>
-							<h3><a href="https://persianmama.com/kabob-koobideh-grilled-minced-meat-kabobs/">Persian Mama</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Pre_II.jpg" alt="" /></a>
-						<header>
-							<h3><a href="https://cookingcounty.com/kabab-koobideh-recipe/">Cooking County</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Pre_III.jpg" alt="" /></a>
-						<header>
-							<h3><a href="https://www.unicornsinthekitchen.com/kabob-koobideh-recipe/">Unicorns In The Kitchen</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Pre_IV.jpg" alt="" /></a>
-						<header>
-							<h3><a href="https://www.thespruceeats.com/kabob-koobideh-5224493/">The Spruce Eats</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-				</div>
-				<hr/>
+    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) }
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column }
+    .card img{ width:100%; aspect-ratio: 16/10; object-fit:cover; display:block }
+    .card .body{ padding:12px 14px }
+    .card h3{ margin:0 0 6px; font-size:18px }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
+    .meta{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+    .pill{ border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
 
-				<div class="row">
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Joojeh_F.jpeg" alt="" /></a>
-						<header>
-							<h3><a href="https://www.koket.se/joojeh-kebab-persisk-kycklingkebab"> Joojeh Kabab </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Kabab_I.jpeg" alt="" /></a>
-						<header>
-							<h3><a href="https://zeinaskitchen.se/kobideh/">Chenjeh Kebab</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<!--
-					<article class="col-2 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Joojeh_P.JPG" alt="" /></a>
-						<header>
-							<h3><a href="https://www.unicornsinthekitchen.com/joojeh-kabab-persian-saffron-chicken-kebab/">Joojeh Kabab</a></h3>
-						</header>
-						
-						<p>
-							write something.
-						</p>
-						
-					</article>
-					-->
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Torsh_P.jpg" alt="" /></a>
-						<header>
-							<h3><a href="https://thecaspianchef.com/2019/05/21/marinated-tangy-kebabs-in-pomegranate-and-herbs/"> Kabab Torsh</a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<a href="#" class="image featured"><img src="images/Koobideh_III.jpeg" alt="" /></a>
-						<header>
-							<h3><a href="https://persiangood.com/recipes/kabab-chenjeh/"> Kabab Koobideh </a></h3>
-						</header>
-						<!--
-						<p>
-							write something.
-						</p>
-						-->
-					</article>
-										
-				</div>
-				
-			</section>
-			</div>
-										<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3> Please follow me at s</h3>
-										</header>
-										<ul class="icons">
-											<li><a href="https://twitter.com/saeed_parvar" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.facebook.com/pasha.00313/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="https://www.instagram.com/pasha.00777/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.researchgate.net/profile/Saeed-Parvar" class="icon brands fa-researchgate"><span class="label">Reseachgate</span></a></li>
-											<li><a href="https://github.com/Pasha0313/Saeed" class="icon brands fa-github"><span class="label">Github</span></a></li>
-											<li><a href="https://www.linkedin.com/in/saeed-parvar/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
+    .tips{ margin-top:20px; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:14px }
+    .tips h2{ margin:0 0 10px; font-size: clamp(20px,2vw,26px) }
+    .tips ul{ margin:0; padding-left: 1.1rem; color:var(--muted) }
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://pasha0313.github.io/Saeed/index.html"> Saeed Parvar</a></li>
-										</ul>
-									</div>
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>BBQ</h1>
+    <p>Family favourites from Iran — especially the tangy, herby <em>Kabab Torsh</em> of the north.</p>
+  </header>
 
-							</div>
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html" aria-current="page">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
 
-						</div>
-					</div>
-				</div>
+  <main role="main">
+    <p class="lede">Koobideh, Joojeh, and Chenjeh are staples at home, but our signature is <strong>Kabab Torsh</strong> — marinated with pomegranate, walnuts, and herbs.</p>
 
-		</div>
+    <section class="grid" aria-label="BBQ dishes">
+      <!-- Koobideh -->
+      <article class="card">
+        <img src="images/Koobideh_III.jpeg" alt="Kabab Koobideh on skewers" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://persianmama.com/kabob-koobideh-grilled-minced-meat-kabobs/" target="_blank" rel="noopener">Kabab Koobideh</a></h3>
+          <p>Minced beef/lamb with grated onion, saffron, and simple seasoning.</p>
+          <div class="meta"><span class="pill">Beef/Lamb</span><span class="pill">Quick</span></div>
+        </div>
+      </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- Joojeh -->
+      <article class="card">
+        <img src="images/Joojeh_F.jpeg" alt="Joojeh kabab — saffron chicken" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://www.unicornsinthekitchen.com/joojeh-kabab-persian-saffron-chicken-kebab/" target="_blank" rel="noopener">Joojeh Kabab</a></h3>
+          <p>Saffron‑yoghurt chicken — tender and smoky.</p>
+          <div class="meta"><span class="pill">Chicken</span><span class="pill">Saffron</span></div>
+        </div>
+      </article>
 
-	</body>
+      <!-- Chenjeh -->
+      <article class="card">
+        <img src="images/Kabab_I.jpeg" alt="Chenjeh kebab — lamb chunks" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://persiangood.com/recipes/kabab-chenjeh/" target="_blank" rel="noopener">Chenjeh Kabab</a></h3>
+          <p>Marinated lamb sirloin cubes, grilled hot and fast.</p>
+          <div class="meta"><span class="pill">Lamb</span><span class="pill">Char</span></div>
+        </div>
+      </article>
+
+      <!-- Torsh -->
+      <article class="card">
+        <img src="images/Torsh_P.jpg" alt="Kabab Torsh with herbs and pomegranate" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://thecaspianchef.com/2019/05/21/marinated-tangy-kebabs-in-pomegranate-and-herbs/" target="_blank" rel="noopener">Kabab Torsh (Gilan)</a></h3>
+          <p>Beef/lamb in a tangy walnut–pomegranate–herb marinade.</p>
+          <div class="meta"><span class="pill">Gilan</span><span class="pill">Pomegranate</span><span class="pill">Walnut</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="tips" aria-labelledby="tips-title">
+      <h2 id="tips-title">BBQ Tips I Actually Use</h2>
+      <ul>
+        <li><strong>Saffron:</strong> bloom in hot water (not boiling) with a pinch of sugar; add late to keep aroma.</li>
+        <li><strong>Koobideh binding:</strong> squeeze grated onion very dry; rest mix 1–2 hours; wide, flat skewers help.</li>
+        <li><strong>Joojeh texture:</strong> yoghurt + a little oil + lemon; avoid long acid marinades for breast meat.</li>
+        <li><strong>Torsh balance:</strong> adjust tartness with pomegranate molasses vs. ground walnuts; add fresh herbs right before grilling.</li>
+        <li><strong>Charcoal:</strong> two‑zone fire; sear then finish indirect; rest 3–5 minutes before serving.</li>
+      </ul>
+    </section>
+
+    <section class="grid" aria-label="Prep gallery" style="margin-top:16px">
+      <article class="card">
+        <img src="images/Pre_I.jpg" alt="BBQ prep board 1" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://persianmama.com/kabob-koobideh-grilled-minced-meat-kabobs/" target="_blank" rel="noopener">Prep ideas</a></h3>
+          <p>Koobideh technique and skewering.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/Pre_II.jpg" alt="BBQ prep board 2" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://cookingcounty.com/kabab-koobideh-recipe/" target="_blank" rel="noopener">Variations</a></h3>
+          <p>Spice profiles & regional twists.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/Pre_III.jpg" alt="BBQ prep board 3" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://www.unicornsinthekitchen.com/kabob-koobideh-recipe/" target="_blank" rel="noopener">Step‑by‑step</a></h3>
+          <p>Clear walkthrough for beginners.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/Pre_IV.jpg" alt="BBQ prep board 4" loading="lazy" decoding="async" />
+        <div class="body">
+          <h3><a href="https://www.thespruceeats.com/kabob-koobideh-5224493/" target="_blank" rel="noopener">Reference</a></h3>
+          <p>Ingredient ratios & tips.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
