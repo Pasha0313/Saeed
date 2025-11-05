@@ -1,109 +1,194 @@
-<!DOCTYPE HTML>
-<!--
-	Pasha
-        s.parvar@hotmail.com
--->
-<html>
-	<head>
-		<title>Contact Me</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-                h1 {text-align: center;}
-  	        h2 {text-align: center;}
-		h3 {text-align: center;}
-                p {text-align: center;}
-                div {text-align: center;}
-                </style>
-	</head>
-	<body class="no-sidebar is-preload">
-		<div id="page-wrapper">
-		<!-- Header -->
-			<div id="header">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Saeed Parvar</title>
+  <meta name="description" content="Contact Saeed Parvar — email, social links, and quick CV download." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08) }
+    body{ margin:0 }
 
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">Contact Me</a></h1>
-						</header>
-					</div>
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Education.html">Education</a></li>
-							<li><a href="CFD.html">CFD</a></li>
-							<li><a href="Skill.html">Skills</a></li>
-							<li><a href="Hobbies.html">Hobbies</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-							<li><a href="BBQ.html"> BBQ </a></li>
-							<li><a href="Contact.html">Contact Me</a></li>
-						</ul>
-					</nav>
-			</div>
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
 
-			<!-- Main -->
-				<!-- Header -->
-  			            <div class="wrapper style1">
-					    <div class="container">
-						    <div class="row">
-							    <article class="col-6 col-12-mobile special">
-									<p> If you're interested in my work—whether it's my innovative software for fluid dynamics, </p>
-									<p> or my creative presence on social media—I'd love to hear from you. </p>
- 									<p> Feel free to reach out with questions, collaborations, or just to say hello. </p>
-									<!-- <ul class="icons">
-									     <li><a href="#" class="icon brands  fa-bitcoin"><span class="label">Bitcoin</span></a></li>
-									     <li><a href="#" class="icon brands  fa-ethereum"><span class="label">Ethereum</span></a></li>
-									     <li><a href="#" class="icon brands  fa-bitcoin"><span class="label">Bitcoin</span></a></li>							
-									     <li><a href="#" class="icon brands  fa-ethereum"><span class="label">Ethereum</span></a></li>
-									     <li><a href="#" class="icon brands  fa-bitcoin"><span class="label">Bitcoin</span></a></li>
-									</ul>  -->
-							    </article> 
-							    <article class="col-6 col-12-mobile special">
-									<a href="#" class=""><img src="images/saeed_P.jpeg" alt="Cinque Terre" /></a>    
-							    </article> 					    
-						    </div>					    
-					    </div>
-				    </div>
+    main{ max-width:1100px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 22px; color:var(--muted) }
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<!-- Contact -->
-							<section class="contact">
-								<header>
-									<h3> You can find me here </h3>
-								</header>
-								<ul class="icons">
-									<li><a href="https://twitter.com/saeed_parvar" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/pasha.00313/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="https://www.instagram.com/pasha.00777/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.researchgate.net/profile/Saeed-Parvar" class="icon brands fa-researchgate"><span class="label">Reseachgate</span></a></li>
-									<li><a href="https://github.com/Pasha0313/Saeed" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									<li><a href="https://www.linkedin.com/in/saeed-parvar/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-								</ul>
-							</section>
-						<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://pasha0313.github.io/Saeed/index.html"> Saeed Parvar</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    .grid{ display:grid; gap:18px; grid-template-columns: 1.1fr .9fr }
+    @media (max-width: 900px){ .grid{ grid-template-columns: 1fr } }
 
-	</body>
+    .panel{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:16px }
+    .panel h2{ margin:0 0 10px; font-size: clamp(20px,2vw,26px) }
+
+    .contact-list{ display:grid; gap:10px }
+    .item{ display:flex; align-items:center; justify-content:space-between; gap:10px; border:1px solid var(--border); border-radius:12px; padding:10px 12px; background: rgba(255,255,255,.02) }
+    .item .left{ display:flex; gap:10px; align-items:center }
+    .item .left strong{ display:block }
+    .item small{ color:var(--muted) }
+    .btn{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); text-decoration:none }
+
+    .photo{ border-radius:16px; overflow:hidden; border:1px solid var(--border) }
+    .photo img{ width:100%; display:block; object-fit:cover }
+
+    .inline{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
+
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>Contact</h1>
+    <p>Questions, collaborations, or speaking invites — I’d love to hear from you.</p>
+  </header>
+
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html" aria-current="page">Contact</a>
+    </div>
+  </nav>
+
+  <main role="main">
+    <p class="lede">If you’re interested in my research or software work in CFD/HPC/ML, or just want to connect, use any of the options below.</p>
+
+    <div class="grid">
+      <section class="panel" aria-labelledby="reachme">
+        <h2 id="reachme">Reach me</h2>
+        <div class="contact-list" role="list">
+          <div class="item" role="listitem">
+            <div class="left">
+              <div>
+                <strong>Email</strong>
+                <small id="mailText">s.parvar[at]hotmail[dot]com</small>
+              </div>
+            </div>
+            <div class="inline">
+              <a id="mailtoBtn" class="btn" href="#">Open email</a>
+              <button class="btn" id="copyBtn" type="button">Copy</button>
+            </div>
+          </div>
+
+          <div class="item" role="listitem">
+            <div class="left">
+              <div>
+                <strong>LinkedIn</strong>
+                <small>Professional updates</small>
+              </div>
+            </div>
+            <a class="btn" href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">Profile</a>
+          </div>
+
+          <div class="item" role="listitem">
+            <div class="left">
+              <div>
+                <strong>GitHub</strong>
+                <small>Code & projects</small>
+              </div>
+            </div>
+            <a class="btn" href="https://github.com/Pasha0313" target="_blank" rel="noopener">Repos</a>
+          </div>
+
+          <div class="item" role="listitem">
+            <div class="left">
+              <div>
+                <strong>ResearchGate</strong>
+                <small>Publications</small>
+              </div>
+            </div>
+            <a class="btn" href="https://www.researchgate.net/profile/Saeed-Parvar" target="_blank" rel="noopener">View</a>
+          </div>
+        </div>
+
+        <div class="inline">
+          <a class="btn" href="images/Resume_in_Saeed_2023.pdf" download>Download CV</a>
+          <a class="btn" href="images/saeed_parvar.vcf" download>Save vCard</a>
+        </div>
+      </section>
+
+      <aside class="photo" aria-label="Portrait">
+        <img src="images/saeed_P.jpeg" alt="Portrait of Saeed Parvar" loading="lazy" decoding="async" />
+      </aside>
+    </div>
+
+    <!-- Optional contact form (static) -->
+    <section class="panel" aria-labelledby="msgme" style="margin-top:18px">
+      <h2 id="msgme">Send a quick message</h2>
+      <form id="contactForm" novalidate>
+        <div style="display:grid; gap:10px; grid-template-columns: 1fr 1fr">
+          <label> Name
+            <input name="name" type="text" required style="width:100%" />
+          </label>
+          <label> Email
+            <input name="email" type="email" required style="width:100%" />
+          </label>
+        </div>
+        <label style="display:block; margin-top:10px"> Message
+          <textarea name="message" rows="5" required style="width:100%"></textarea>
+        </label>
+        <div class="inline" style="margin-top:10px">
+          <button type="submit" class="btn">Preview email</button>
+          <small style="color:var(--muted)">This opens your mail app with a prefilled message (no data is stored).</small>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Very light email protection + helpers
+    const user = 's.parvar';
+    const host = 'hotmail.com';
+    const mailto = `mailto:${user}@${host}`;
+    const mailText = document.getElementById('mailText');
+    const mailtoBtn = document.getElementById('mailtoBtn');
+    const copyBtn = document.getElementById('copyBtn');
+
+    mailtoBtn.addEventListener('click', (e)=>{ e.preventDefault(); location.href = mailto; });
+    copyBtn.addEventListener('click', async ()=>{
+      try{ await navigator.clipboard.writeText(`${user}@${host}`); copyBtn.textContent = 'Copied!'; setTimeout(()=>copyBtn.textContent='Copy', 1500); }catch(_){ /* ignore */ }
+    });
+
+    // Contact form: open mail client with a pre-filled message
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = fd.get('name')||'';
+      const email = fd.get('email')||'';
+      const message = (fd.get('message')||'').toString().replace(/\n/g, '%0D%0A');
+      const subject = encodeURIComponent(`Website message from ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+      location.href = `mailto:${user}@${host}?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
