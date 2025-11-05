@@ -1,224 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills — Saeed Parvar</title>
+  <meta name="description" content="Skills of Saeed Parvar — CFD, HPC, Machine Learning, programming and scientific tools." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --text:#e6e6e6; --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08); --brand:#4da3ff }
+    body{ margin:0 }
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
 
-<!DOCTYPE HTML>
-<!--
-	Pasha
-        S.pavar@hotmail.com
--->
-<html>
-	<head>
-		<title> Skill </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-                h1 {text-align: center;}
-  	        h2 {text-align: center;}
-		h3 {text-align: center;}
-                p {text-align: center;}
-                div {text-align: center;}
-                </style>
-	</head>
-	<body class="right-sidebar is-preload">
-		<div id="page-wrapper">
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
 
-			<!-- Header -->
-				<div id="header">
+    main{ max-width:1100px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 22px; color:var(--muted) }
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Skill</a></h1>
-							</header>
-						</div>
+    .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin: 26px 0 12px }
+    .section-title h2{ margin:0; font-size: clamp(22px,2.2vw,28px) }
 
-					<!-- Nav -->
-						<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="Education.html">Education</a></li>
-							<li><a href="CFD.html">CFD</a></li>
-							<li><a href="Skill.html">Skills</a></li>
-							<li><a href="Hobbies.html">Hobbies</a></li>
-							<li><a href="Gallery.html">Gallery</a></li>
-							<li><a href="BBQ.html"> BBQ </a></li>
-							<li><a href="Contact.html">Contact Me</a></li>
-						</ul>
-					</nav>
-				</div>
+    .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column }
+    .card img{ width:100%; aspect-ratio: 16/10; object-fit:cover; display:block }
+    .card .body{ padding:12px 14px }
+    .card h3{ margin:0 0 4px; font-size:18px }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
 
-			<!-- Main -->
-	    <div class="wrapper style1">
-			<section id="features" class="container special">
-				<header>
-					<h3>My passion and devotion towards the art of programming are truly unparalleled. 
-  					    The intricacies of coding stimulate my mind and ignite my creativity, 
-  					    driving me towards innovation and excellence. 
-  					    My fervor for programming knows no bounds, and I strive to constantly
- 		 			    expand my knowledge and skills in this dynamic field.!
-					</h3>
-					<h4> With a passion for problem-solving and innovation, 
-					I embarked on my programming journey at a tender age of 14 with GW Basic. 
-					My unwavering curiosity and fascination with the endless possibilities of 
-					programming led me to develop my first database with Foxpro in 1999. 
-					In my pursuit of excellence, I honed my skills by mastering Pascal and C in university, 
-					but my true love affair began with Fortran and Parallel processing (MPI and OpenMP) in 2007. 
-					Over the years, I have also acquired proficiency in other tools such as Python, Matlab, Texplot, and Paraview. 
-					My extensive programming knowledge and expertise make me a valuable asset to any project, 
-					and I continue to push the boundaries of what is possible in the field of computer science.</h4>
-				</header>
-				<div class="row">
-					<article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> C++ </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/Cpp.png" alt="" /></a>
-					</article>
- 					<article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Python </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/python.jpeg" alt="" /></a>
-					</article>
-                                        <article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Matlab </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/matlab.jpeg" alt="" /></a>
-					</article>
-					<article class="col-3 col-12-mobile special">
-					        <header>
-						   <h3><a href="#">R</a></h3>
-					        </header>
-						<a href="#" class="image fit"><img src="images/R.jpeg" alt="" /></a>
-					</article>
-				</div>
-		                <hr/>
-				<div class="row">
-					<article class="col-3 col-12-mobile special">
-					        <header>
-						   <h3><a href="#">Fortran</a></h3>
-					        </header>
-						<a href="#" class="image fit"><img src="images/fortran.jpg" alt="" /></a>
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> Ansys </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/Ansys.png" alt="" /></a>
-					</article>
- 					<article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Comsol </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/Comsol.jfif" alt="" /></a>
-					</article>
-                                        <article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Anaconda </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/Anaconda.png" alt="" /></a>
-					</article>
-				</div>
-		                <hr/>
-							
-				<div class="row">
-                                       <article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> MPI </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/mpi.jpg" alt="" /></a>
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> OpenMp </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/openmp.jpg" alt="" /></a>
-					</article>
- 					<article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> GPU </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/cuda.jpeg" alt="" /></a>
-					</article>
-                                <article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Maple </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/maple.jpeg" alt="" /></a>
-					</article>
-				</div>
-				<hr/>
-				<div class="row">
-                                <article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> Paraview </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/paraview.jpeg" alt="" /></a>
-					</article>
-					<article class="col-3 col-12-mobile special">
-						<header>
-							<h3><a href="#"> TecPlot </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/tecplot.jpeg" alt="" /></a>
-					</article>
- 					<article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> FoxPro </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/foxpro.jpeg" alt="" /></a>
-					</article>
-                                        <article class="col-3 col-12-mobile special">
-  						<header>
-							<h3><a href="#"> Pascal </a></h3>
-						</header>
-						<a href="#" class="image fit"><img src="images/pascal.jpeg" alt="" /></a>
-					</article>
-				</div>
-			</section>
-			</div>
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-								<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3>  Please follow me at </h3>
-										</header>
-										<ul class="icons">
-											<li><a href="https://twitter.com/saeed_parvar" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="https://www.facebook.com/pasha.00313/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="https://www.instagram.com/pasha.00777/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://www.researchgate.net/profile/Saeed-Parvar" class="icon brands fa-researchgate"><span class="label">Reseachgate</span></a></li>
-											<li><a href="https://github.com/Pasha0313/Saeed" class="icon brands fa-github"><span class="label">Github</span></a></li>
-											<li><a href="https://www.linkedin.com/in/saeed-parvar/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
+    .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px }
+    .tag{ border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="https://pasha0313.github.io/Saeed/index.html"> Saeed Parvar</a></li>
-										</ul>
-									</div>
+    /* Category blocks */
+    .category{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:14px }
+    .category h3{ margin:0 0 10px; font-size:18px }
+    .list{ display:flex; flex-wrap:wrap; gap:8px }
+    .pill{ border:1px solid var(--border); padding:6px 10px; border-radius:999px; font-size:14px }
 
-							</div>
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>Skills</h1>
+    <p>CFD • HPC • Scientific Computing • Data & ML</p>
+  </header>
 
-						</div>
-					</div>
-				</div>
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html" aria-current="page">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
 
-		</div>
+  <main role="main">
+    <p class="lede">I work across low‑level HPC and high‑level data science. Below is a concise view of my core programming languages, simulation stack, parallelism, and analysis & visualization tools.</p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Core programming languages -->
+    <section aria-labelledby="prog-title">
+      <div class="section-title"><h2 id="prog-title">Programming Languages</h2></div>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <img src="images/Cpp.png" alt="C++ logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>C++</h3>
+            <p>Modern C++ for numerics and performance.</p>
+            <div class="tags"><span class="tag">STL</span><span class="tag">Templates</span><span class="tag">Profiling</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/python.jpeg" alt="Python logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Python</h3>
+            <p>Data, ML pipelines, and glue code for simulators.</p>
+            <div class="tags"><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">SciPy</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/matlab.jpeg" alt="MATLAB logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>MATLAB</h3>
+            <p>Rapid prototyping & visualization.</p>
+            <div class="tags"><span class="tag">Toolboxes</span><span class="tag">Optimization</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/R.jpeg" alt="R logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>R</h3>
+            <p>Statistics & plotting when needed.</p>
+            <div class="tags"><span class="tag">ggplot</span><span class="tag">dplyr</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/fortran.jpg" alt="Fortran logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Fortran</h3>
+            <p>Legacy solvers & HPC kernels.</p>
+            <div class="tags"><span class="tag">F90+</span><span class="tag">Numerics</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-	</body>
+    <!-- Simulation & CAE tools -->
+    <section aria-labelledby="sim-title">
+      <div class="section-title"><h2 id="sim-title">Simulation & CAE</h2></div>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <img src="images/Ansys.png" alt="ANSYS logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>ANSYS</h3>
+            <p>CFD workflows and validation.</p>
+            <div class="tags"><span class="tag">Fluent</span><span class="tag">Meshing</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/Comsol.jfif" alt="COMSOL logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>COMSOL</h3>
+            <p>Multiphysics modeling & prototyping.</p>
+            <div class="tags"><span class="tag">PDEs</span><span class="tag">Parametric</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/Anaconda.png" alt="Anaconda logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Anaconda</h3>
+            <p>Reproducible Python environments.</p>
+            <div class="tags"><span class="tag">Conda</span><span class="tag">Virtualenv</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Parallelism & acceleration -->
+    <section aria-labelledby="hpc-title">
+      <div class="section-title"><h2 id="hpc-title">Parallelism & Acceleration</h2></div>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <img src="images/mpi.jpg" alt="MPI logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>MPI</h3>
+            <p>Domain decomposition on clusters.</p>
+            <div class="tags"><span class="tag">OpenMPI</span><span class="tag">MPICH</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/openmp.jpg" alt="OpenMP logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>OpenMP</h3>
+            <p>Shared‑memory parallel patterns.</p>
+            <div class="tags"><span class="tag">Pragmas</span><span class="tag">Affinity</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/cuda.jpeg" alt="CUDA/GPU image" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>GPU</h3>
+            <p>CUDA kernels & accelerators.</p>
+            <div class="tags"><span class="tag">Kernels</span><span class="tag">Profiling</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/maple.jpeg" alt="Maple logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Maple</h3>
+            <p>Symbolics for derivations.</p>
+            <div class="tags"><span class="tag">CAS</span><span class="tag">Algebra</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Visualization & legacy -->
+    <section aria-labelledby="viz-title">
+      <div class="section-title"><h2 id="viz-title">Visualization & Legacy</h2></div>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <img src="images/paraview.jpeg" alt="ParaView screenshot" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>ParaView</h3>
+            <p>Post‑processing at scale.</p>
+            <div class="tags"><span class="tag">VTK</span><span class="tag">Filters</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/tecplot.jpeg" alt="Tecplot screenshot" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Tecplot</h3>
+            <p>CFD plotting & analysis.</p>
+            <div class="tags"><span class="tag">Macros</span><span class="tag">Layouts</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/foxpro.jpeg" alt="FoxPro logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>FoxPro</h3>
+            <p>First databases (legacy).</p>
+            <div class="tags"><span class="tag">1999</span><span class="tag">DBF</span></div>
+          </div>
+        </article>
+        <article class="card" role="listitem">
+          <img src="images/pascal.jpeg" alt="Pascal logo" loading="lazy" decoding="async" />
+          <div class="body">
+            <h3>Pascal</h3>
+            <p>Foundations in CS.</p>
+            <div class="tags"><span class="tag">Algorithms</span><span class="tag">Basics</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Compact category pills (for quick skim) -->
+    <section aria-labelledby="quick-title">
+      <div class="section-title"><h2 id="quick-title">At a Glance</h2></div>
+      <div class="grid">
+        <div class="category">
+          <h3>CFD & Physics</h3>
+          <div class="list">
+            <span class="pill">DNS/LES/RANS</span>
+            <span class="pill">Multiphase</span>
+            <span class="pill">Reactive/Compressible</span>
+            <span class="pill">Constitutive models</span>
+          </div>
+        </div>
+        <div class="category">
+          <h3>Data & ML</h3>
+          <div class="list">
+            <span class="pill">POD</span>
+            <span class="pill">DMD/HoDMD</span>
+            <span class="pill">Pipelines</span>
+            <span class="pill">Visualization</span>
+          </div>
+        </div>
+        <div class="category">
+          <h3>HPC</h3>
+          <div class="list">
+            <span class="pill">MPI</span>
+            <span class="pill">OpenMP</span>
+            <span class="pill">CUDA</span>
+            <span class="pill">Profiling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
