@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saeed Parvar — CFD, HPC & ML</title>
+  <meta name="description" content="Saeed Parvar — PhD Mechanical Engineering. Research in CFD, turbulent & multiphase flows, HPC and Machine Learning." />
+  <meta name="author" content="Saeed Parvar" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Saeed Parvar — CFD, HPC & ML" />
+  <meta property="og:description" content="Research in CFD, turbulent & multiphase flows, HPC and Machine Learning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Profile_II.jpg" />
+  <meta property="og:url" content="https://pasha0313.github.io/Saeed/" />
+  <link rel="icon" href="images/favicon.png" />
+
+  <!-- Base styles (replace your scattered center styles) -->
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --surface: #121317;
+      --text: #e6e6e6;
+      --muted: #a8adb7;
+      --brand: #4da3ff;
+      --brand-2: #7ef0c1;
+      --maxw: 1100px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#ffffff; --surface:#f7f8fa; --text:#0c0d12; --muted:#5b616e; }
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+      color:var(--text); background:linear-gradient(180deg,var(--bg),#0e1116 30%, var(--surface) 100%);
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{ text-decoration:underline }
+
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    header.site{
+      display:grid; gap:1rem; place-items:center; padding:48px 0 24px;
+    }
+    .avatar{ border-radius: 20px; max-width: 220px; height:auto; box-shadow: 0 10px 40px rgba(0,0,0,.25)}
+    h1{font-size:clamp(28px,3vw,40px); margin:12px 0 4px; letter-spacing:0.2px}
+    .subtitle{color:var(--muted); margin:0}
+
+    nav.primary{ position: sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
+      background-color: color-mix(in oklab, var(--surface) 75%, transparent);
+      border-bottom:1px solid rgba(255,255,255,.06) }
+    nav.primary .inner{display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; justify-content:center; padding:10px}
+    nav.primary a{ padding:8px 12px; border-radius:12px }
+    nav.primary a:hover{ background:rgba(255,255,255,.06); text-decoration:none }
+
+    .hero{ text-align:center; padding: 24px 0 8px}
+    .hero h2{ font-size: clamp(22px, 2.4vw, 30px); margin:0 0 10px }
+    .hero p{ max-width: 850px; margin: 0 auto; color:var(--muted) }
+
+    .badges{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:16px 0}
+    .badge{ border:1px solid rgba(255,255,255,.12); color:var(--muted); padding:6px 10px; border-radius: 999px }
+
+    section{ padding: 40px 0 }
+    .grid{ display:grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); }
+
+    .card{ background: rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition: transform .2s ease, box-shadow .2s ease }
+    .card:hover{ transform: translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.2) }
+    .card img{ width:100%; aspect-ratio: 16/10; object-fit:cover; display:block }
+    .card .body{ padding:12px 14px }
+    .card h3{ margin:0 0 6px; font-size:18px }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
+
+    .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin:0 0 10px }
+    .section-title h2{ font-size: clamp(22px,2.2vw,28px); margin:0 }
+
+    .pubs a{ display:block; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08); margin:10px 0; background: rgba(255,255,255,.02) }
+    .pubs a strong{ color: var(--text) }
+
+    footer.site{ padding: 30px 0 60px; color:var(--muted) }
+    .social{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap }
+    .social a{ padding:10px 12px; border:1px solid rgba(255,255,255,.12); border-radius:12px }
+
+    /* Accessibility helpers */
+    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden }
+    .skip-link:focus{ left:8px; top:8px; width:auto; height:auto; background:#000; color:#fff; padding:8px 10px; border-radius:8px; z-index:999 }
+
+    /* Responsive tweaks */
+    @media (min-width: 900px){ .hero p { font-size: 18px } }
+  </style>
+
+  <!-- Optional: your existing main.css AFTER our small base to allow overrides -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site container" id="top" role="banner">
+    <img class="avatar" src="images/Profile_II.jpg" alt="Portrait of Saeed Parvar" loading="eager" decoding="async" width="440" height="440" />
+    <h1>Saeed Parvar</h1>
+    <p class="subtitle">PhD Mechanical Engineering — CFD • Turbulence • Multiphase • HPC • ML</p>
+  </header>
+
+  <nav class="primary" aria-label="Primary">
+    <div class="inner container">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main id="content" class="container" role="main">
+    <section class="hero" id="hero" aria-labelledby="intro-title">
+      <h2 id="intro-title">Welcome</h2>
+      <p>
+        I’m a post‑doctoral researcher (KTH Royal Institute of Technology) exploring complex fluids, compressible and multiphase flows. I build
+        <strong>high‑fidelity simulations</strong> and <strong>data‑driven models</strong> to understand flow physics and translate insights into safer, more efficient engineering systems.
+      </p>
+      <div class="badges" aria-label="Research interests">
+        <span class="badge">Turbulence</span>
+        <span class="badge">Multiphase</span>
+        <span class="badge">Reactive/Compressible</span>
+        <span class="badge">HPC (MPI/OpenMP/GPU)</span>
+        <span class="badge">ML (POD/DMD)</span>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-title">
+      <div class="section-title">
+        <h2 id="research-title">Research Areas</h2>
+      </div>
+      <div class="grid" role="list">
+
+        <article class="card" role="listitem">
+          <a href="https://aip.scitation.org/doi/10.1063/5.0039826" target="_blank" rel="noopener">
+            <img src="images/Turb.jpeg" alt="Visualization of turbulent flow" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://aip.scitation.org/doi/10.1063/5.0039826" target="_blank" rel="noopener">Turbulent Flow</a></h3>
+            <p>DNS • LES • RANS</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="https://www.sciencedirect.com/topics/computer-science/machine-learning" target="_blank" rel="noopener">
+            <img src="images/Machine-learning.jpg" alt="Abstract illustration of machine learning" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://www.sciencedirect.com/topics/computer-science/machine-learning" target="_blank" rel="noopener">Machine Learning</a></h3>
+            <p>POD • DMD • HoDMD</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="#" aria-label="High Performance Computing">
+            <img src="images/HPC.jpeg" alt="Server racks representing high performance computing" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3>High‑Performance Computing</h3>
+            <p>MPI • OpenMP • GPU</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0017931021013478?via%3Dihub" target="_blank" rel="noopener">
+            <img src="images/Non_Newtonian.jpeg" alt="Polymeric fluid streamlines" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://www.sciencedirect.com/science/article/pii/S0017931021013478?via%3Dihub" target="_blank" rel="noopener">Non‑Newtonian Fluids</a></h3>
+            <p>Constitutive modeling • Shear thinning/thickening</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="#" aria-label="Flow Stability">
+            <img src="images/KH_instability.jpeg" alt="Kelvin–Helmholtz instability visualization" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3>Stability</h3>
+            <p>Linear • Nonlinear • Transition</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="https://www.sciencedirect.com/science/article/pii/S0094576513001999?via%3Dihub" target="_blank" rel="noopener">
+            <img src="images/RM.jpeg" alt="Reactive compressible flow visualization" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://www.sciencedirect.com/science/article/pii/S0094576513001999?via%3Dihub" target="_blank" rel="noopener">Reactive/Compressible</a></h3>
+            <p>Chemical kinetics • EOS • Rapid combustion</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="https://mme.modares.ac.ir/article-15-220-en.html" target="_blank" rel="noopener">
+            <img src="images/Shock-bubble.jpeg" alt="Shock-bubble interaction" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://mme.modares.ac.ir/article-15-220-en.html" target="_blank" rel="noopener">Multiphase/Multimaterial</a></h3>
+            <p>Compressible & incompressible • Level-set • VOF</p>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <a href="https://aip.scitation.org/doi/10.1063/5.0042516" target="_blank" rel="noopener">
+            <img src="images/analytical.jpeg" alt="Analytical boundary layer sketch" loading="lazy" decoding="async" />
+          </a>
+          <div class="body">
+            <h3><a href="https://aip.scitation.org/doi/10.1063/5.0042516" target="_blank" rel="noopener">Analytical Solutions</a></h3>
+            <p>Boundary layer • Planar jet • Mixing layer</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+<section id="publications" aria-labelledby="pubs-title">
+  <div class="section-title">
+    <h2 id="pubs-title">Publications</h2>
+    <a href="https://scholar.google.com/citations?hl=en&user=Te8VKkEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar →</a>
+  </div>
+  <div class="pubs">
+
+    <a href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/natural-convection-of-elastoviscoplastic-fluids-in-a-square-cavity-with-differentially-heated-side-walls/" target="_blank" rel="noopener">
+      <strong>Natural convection of elastoviscoplastic fluids in a square cavity with differentially heated side walls</strong> — <em>J. Fluid Mech. 1021, A43</em> (2025)
+    </a>
+
+    <a href="https://arxiv.org/abs/2508.03362" target="_blank" rel="noopener">
+      <strong>The coherent structures of EVP Fluid Flow Past a Circular Cylinder</strong> — <em>arXiv preprint</em> (2025)
+    </a>
+
+    <a href="#" target="_blank" rel="noopener">
+      <strong>Three-dimensional Wake Instabilities in the Flow of Viscoelastic and Elastoviscoplastic Fluids Past a Circular Cylinder</strong> — <em>preprint</em> (2025)
+    </a>
+
+    <a href="https://arxiv.org/abs/2406.10153" target="_blank" rel="noopener">
+      <strong>Asymptotic scaling laws for periodic turbulent boundary layers and their numerical simulation up to Re<sub>θ</sub>=8300</strong> — <em>arXiv preprint</em> — Cited by 2 (2024)
+    </a>
+
+    <a href="https://link.springer.com/article/10.1007/s00162-024-00689-8" target="_blank" rel="noopener">
+      <strong>General hydrodynamic features of elastoviscoplastic fluid flows through randomised porous media</strong> — <em>Theor. Comput. Fluid Dyn. 38(4), 531</em> — Cited by 7 (2024)
+    </a>
+
+    <a href="https://arxiv.org/abs/2303.09262" target="_blank" rel="noopener">
+      <strong>Elastoviscoplastic fluid flow past a circular cylinder</strong> — <em>arXiv preprint</em> — Cited by 2 (2023)
+    </a>
+
+    <a href="https://www.sciencedirect.com/science/article/pii/S0017931021008227" target="_blank" rel="noopener">
+      <strong>Thermal boundary layer of laminar flow of dilute polymer solution</strong> — <em>Int. J. Heat Mass Transf. 185, 122248</em> — Cited by 4 (2022)
+    </a>
+
+    <a href="https://link.springer.com/article/10.1007/s10665-021-10182-5" target="_blank" rel="noopener">
+      <strong>The steady laminar planar mixing layer flow of viscoelastic FENE-P fluids</strong> — <em>J. Eng. Math. 132(1), 14</em> — Cited by 4 (2022)
+    </a>
+
+    <a href="https://aip.scitation.org/doi/10.1063/5.0042516" target="_blank" rel="noopener">
+      <strong>Large eddy simulations of turbulent planar jets of viscoelastic fluids</strong> — <em>Phys. Fluids 33(4)</em> — Cited by 7 (2021)
+    </a>
+
+    <a href="https://aip.scitation.org/doi/10.1063/5.0039826" target="_blank" rel="noopener">
+      <strong>Revisiting the flat-plate laminar boundary layer flow of viscoelastic FENE-P fluids</strong> — <em>Phys. Fluids 33(2)</em> — Cited by 10 (2021)
+    </a>
+
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377025719304539" target="_blank" rel="noopener">
+      <strong>Local similarity solution for steady laminar planar jet flow of viscoelastic FENE-P fluids</strong> — <em>J. Non-Newtonian Fluid Mech. 279, 104265</em> — Cited by 20 (2020)
+    </a>
+
+    <a href="https://mme.modares.ac.ir/article-15-220-en.html" target="_blank" rel="noopener">
+      <strong>Simulation of compressible multimaterial flow by 2D hydrodynamic code</strong> — <em>Modares Mech. Eng. 17(2):211–220</em> (2017)
+    </a>
+
+    <a href="https://mme.modares.ac.ir/article-15-10799-en.html" target="_blank" rel="noopener">
+      <strong>Investigating the domain length for simulation of gaseous detonation</strong> — <em>Modares Mech. Eng. 15(1):277–284</em> (2015)
+    </a>
+
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0094576513001999" target="_blank" rel="noopener">
+      <strong>Hydrodynamic instabilities and transverse waves in propagation mechanism of gaseous detonations</strong> — <em>Acta Astronautica 91:263–282</em> — Cited by 51 (2013)
+    </a>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site container" role="contentinfo">
+    <nav class="social" aria-label="Social links">
+      <a href="https://twitter.com/saeed_parvar" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
+      <a href="https://www.facebook.com/pasha.00313/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      <a href="https://www.instagram.com/pasha.00777/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      <a href="https://www.researchgate.net/profile/Saeed-Parvar" target="_blank" rel="noopener" aria-label="ResearchGate">ResearchGate</a>
+      <a href="https://github.com/Pasha0313/Saeed" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </nav>
+    <p style="text-align:center; margin-top:14px">© <span id="y"></span> Saeed Parvar.</p>
+  </footer>
+
+  <!-- Respectful tracking (sendBeacon + Do Not Track) -->
+  <script>
+    (function(){
+      const dnt = navigator.doNotTrack == "1" || window.doNotTrack == "1" || navigator.msDoNotTrack == "1";
+      if (dnt) return;
+      function send(payload){
+        const url = "https://fastapi-tracker-472812449256.us-central1.run.app/track";
+        const body = JSON.stringify(payload);
+        if (navigator.sendBeacon) {
+          const blob = new Blob([body], {type: 'application/json'});
+          navigator.sendBeacon(url, blob);
+        } else {
+          fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body});
+        }
+      }
+      window.addEventListener('load', function(){
+        send({
+          url: location.href,
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+          timestamp: new Date().toISOString()
+        });
+      }, {once:true});
+    })();
+  </script>
+
+  <script>
+    // Small enhancement: current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Your existing scripts (deferred) -->
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
+

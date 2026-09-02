@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Saeed Parvar</title>
+  <meta name="description" content="Photo gallery — conferences, groups, labs, and milestones across KTH, ICL, FEUP and more." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    :root { --muted:#a8adb7; --surface: rgba(255,255,255,.03); --border: rgba(255,255,255,.08) }
+    body{ margin:0 }
+
+    header.site{ display:grid; place-items:center; padding:42px 16px 18px }
+    header.site h1{ margin:8px 0 6px; font-size: clamp(28px, 3vw, 40px) }
+    header.site p{ margin:0; color:var(--muted) }
+
+    nav.primary{ position: sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(10px); background: color-mix(in oklab, #111 80%, transparent); border-bottom:1px solid var(--border) }
+    nav.primary .inner{ max-width:1100px; margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+    nav.primary a{ padding:8px 12px; border-radius:10px; text-decoration:none }
+    nav.primary a:hover{ background:var(--surface) }
+
+    main{ max-width:1200px; margin: 0 auto; padding: 24px 16px 60px }
+    .lede{ text-align:center; max-width:900px; margin: 0 auto 26px; color:var(--muted) }
+
+    .section{ margin: 34px 0 }
+    .section h2{ font-size: clamp(20px,2vw,26px); margin: 0 0 10px }
+    .section p{ color: var(--muted); margin: 0 0 14px }
+
+    .masonry{ column-count: 1; column-gap: 14px }
+    @media (min-width:700px){ .masonry{ column-count: 2 } }
+    @media (min-width:1000px){ .masonry{ column-count: 3 } }
+
+    .tile{ display:block; break-inside: avoid; margin:0 0 14px; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--surface) }
+    .tile img{ width:100%; height:auto; display:block }
+    .tile figcaption{ padding:8px 10px; color:var(--muted); font-size:14px }
+
+    /* Lightbox */
+    .lightbox{ position: fixed; inset:0; display:none; align-items:center; justify-content:center; background: rgba(0,0,0,.75); z-index:1000 }
+    .lightbox.open{ display:flex }
+    .lightbox figure{ max-width: 92vw; max-height: 92vh; margin:0; position:relative }
+    .lightbox img{ width:auto; height:auto; max-width:100%; max-height:100%; display:block; border-radius: 12px }
+    .lightbox .caption{ margin-top:8px; text-align:center; color:#eaeaea; font-size:14px }
+    .lightbox .close{ position:absolute; top:-10px; right:-10px; background:#000; color:#fff; border:none; border-radius:999px; width:36px; height:36px; cursor:pointer; font-size:18px }
+
+    footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+  </style>
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>Gallery</h1>
+    <p>Moments from labs, conferences, and team events.</p>
+  </header>
+
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html" aria-current="page">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main role="main">
+    <!-- ICL / KTH desks -->
+    <section class="section" aria-labelledby="desks-title">
+      <h2 id="desks-title">Desks & Labs</h2>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/ICL_II.jpg" alt="Desk at Imperial College London" loading="lazy" decoding="async" />
+          <figcaption>Desk at ICL.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/KTH_Last_Day.JPG" alt="Desk at KTH on the last day" loading="lazy" decoding="async" />
+          <figcaption>Desk at KTH — last day.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/UP_Last_Day.JPG" alt="Desk at University of Porto" loading="lazy" decoding="async" />
+          <figcaption>Desk at University of Porto (UP).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Group moments -->
+    <section class="section" aria-labelledby="groups-title">
+      <h2 id="groups-title">Groups & Events</h2>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/Group_Activity.JPG" alt="Group activity 2023 at KTH" loading="lazy" decoding="async" />
+          <figcaption>Group activity 2023 — KTH.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/Group_Lunch.JPG" alt="Goodbye lunch at KTH" loading="lazy" decoding="async" />
+          <figcaption>Goodbye lunch — KTH.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/Xmas_2022.jpg" alt="Christmas dinner at Mechanical Engineering" loading="lazy" decoding="async" />
+          <figcaption>Christmas dinner — Dept. of Mechanical Engineering.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/Last_Academic_Day.JPG" alt="Last academic day 2022–2023" loading="lazy" decoding="async" />
+          <figcaption>Last day of academic year 2022–2023.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Conferences -->
+    <section class="section" aria-labelledby="conf-title">
+      <h2 id="conf-title">Conferences</h2>
+      <p>Selected meetings and presentations.</p>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/SerC2023.JPG" alt="SeRC 2023" loading="lazy" decoding="async" />
+          <figcaption>SeRC 2023 — Stockholm, Sweden.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/SerC_2023_I.JPG" alt="SeRC 2023 second photo" loading="lazy" decoding="async" />
+          <figcaption>SeRC 2023 — session.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/FLOW_Annual_meeting_2023.jpg" alt="FLOW Annual Meeting 2023" loading="lazy" decoding="async" />
+          <figcaption>FLOW Annual Meeting 2023 — KTH.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/EFMC14_D1.JPG" alt="EFMC14 Athens photo 1" loading="lazy" decoding="async" />
+          <figcaption>EFMC14 — Athens, Greece.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/EFMC14_D2.JPG" alt="EFMC14 Athens photo 2" loading="lazy" decoding="async" />
+          <figcaption>EFMC14 — session.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/EFMC_II.jpeg" alt="With Christoph Brücker at EFMC" loading="lazy" decoding="async" />
+          <figcaption>With Christoph Brücker — EFMC.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/EFMC_III.jpeg" alt="With Pierre Saramito at EFMC" loading="lazy" decoding="async" />
+          <figcaption>With Pierre Saramito — EFMC.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/EFMC_IV.jpeg" alt="SERC FLOW team in Athens" loading="lazy" decoding="async" />
+          <figcaption>SERC FLOW — Athens.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- People & groups -->
+    <section class="section" aria-labelledby="people-title">
+      <h2 id="people-title">People</h2>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/outi.jpeg" alt="Outi Tammisola group at KTH" loading="lazy" decoding="async" />
+          <figcaption>Outi Tammisola Group — KTH.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/luca.jpg" alt="Luca Brandt group at KTH" loading="lazy" decoding="async" />
+          <figcaption>Luca Brandt Group — KTH.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="section" aria-labelledby="phd-title">
+      <h2 id="phd-title">PhD Milestones</h2>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/129.JPG" alt="PhD defence day during COVID-19" loading="lazy" decoding="async" />
+          <figcaption>PhD defence day — COVID-19 setup (2021).</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/saeed.jpeg" alt="PhD defence meeting at FEUP" loading="lazy" decoding="async" />
+          <figcaption>PhD defence meeting — FEUP (CEFT Group), 2021.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Summer schools and workshops -->
+    <section class="section" aria-labelledby="schools-title">
+      <h2 id="schools-title">Schools & Workshops</h2>
+      <div class="masonry">
+        <figure class="tile">
+          <img src="images/summer_school.JPG" alt="Summer School on Complex Fluid-Flows in Microfluidics 2017" loading="lazy" decoding="async" />
+          <figcaption>Summer School on Complex Fluid‑Flows in Microfluidics (2017).</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/IWNMNNF.jpg" alt="IWNMNNF 2019" loading="lazy" decoding="async" />
+          <figcaption>IWNMNNF 2019.</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/Porto_1st.JPG" alt="First day in Porto 2017" loading="lazy" decoding="async" />
+          <figcaption>First day in Porto (2017).</figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="images/Fernando.jpeg" alt="Last day in Porto 2021 with CEFT Group" loading="lazy" decoding="async" />
+          <figcaption>Last day in Porto (2021) — CEFT Group.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <!-- Lightweight lightbox logic (no deps) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <figure>
+      <button class="close" aria-label="Close">×</button>
+      <img alt="" />
+      <figcaption class="caption"></figcaption>
+    </figure>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Lightbox open/close
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    const lbCap = lb.querySelector('.caption');
+    const closeBtn = lb.querySelector('.close');
+
+    function openLB(src, alt, cap){
+      lbImg.src = src; lbImg.alt = alt || '';
+      lbCap.textContent = cap || alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden','false');
+    }
+    function closeLB(){
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      lbImg.src = ''; lbCap.textContent = '';
+    }
+    closeBtn.addEventListener('click', closeLB);
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLB(); });
+
+    // Delegate clicks from all gallery images
+    document.querySelectorAll('.tile img').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        const cap = img.closest('figure').querySelector('figcaption')?.textContent || img.alt;
+        openLB(img.src, img.alt, cap);
+      });
+      img.style.cursor = 'zoom-in';
+    });
+  </script>
+
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
