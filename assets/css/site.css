@@ -163,6 +163,17 @@ figure.inline figcaption{ padding:10px 12px; color:var(--muted) }
 .card.project .role{ display:block; color:var(--muted); font-size:13px; margin:-2px 0 8px }
 .card.project p{ font-size:15px }
 .card.project .btn{ margin-top:12px }
+.card.project .icon{ width:44px; height:44px; object-fit:contain; border-radius:10px; background:var(--surface-2); padding:6px; margin-bottom:10px }
+
+/* Cards that pair a photo with project text (book cover, etc.) */
+.card.project.with-photo{ flex-direction:row; align-items:stretch }
+.card.project.with-photo .photo{ flex:0 0 130px; border-radius:0 }
+.card.project.with-photo .photo img{ width:100%; height:100%; object-fit:cover; display:block }
+.card.project.with-photo .body{ flex:1 1 auto }
+@media (max-width:480px){ .card.project.with-photo{ flex-direction:column } .card.project.with-photo .photo{ flex-basis:auto; max-height:220px } }
+
+/* Decorative page banner photo */
+.hero-photo{ display:block; max-width:340px; margin:22px auto 6px; border-radius:var(--radius); border:1px solid var(--border) }
 
 /* Footer */
 footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
