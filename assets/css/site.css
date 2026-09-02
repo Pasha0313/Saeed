@@ -51,6 +51,21 @@ nav.primary a{ padding:8px 12px; border-radius:10px; color:var(--text) }
 nav.primary a:hover{ background:var(--surface-2); text-decoration:none }
 nav.primary a[aria-current="page"]{ background:var(--surface-2); color:var(--brand); font-weight:600 }
 
+/* Mobile nav toggle — hidden and inert above the breakpoint */
+.nav-toggle{ display:none }
+@media (max-width:700px){
+  .nav-toggle{
+    display:flex; align-items:center; gap:8px; width:calc(100% - 32px); margin:8px 16px;
+    padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:10px;
+    color:var(--text); font:inherit; font-size:15px; cursor:pointer;
+  }
+  .nav-toggle::before{ content:"☰"; font-size:16px; line-height:1 }
+  .nav-toggle[aria-expanded="true"]::before{ content:"✕" }
+  nav.primary .inner{ display:none; flex-direction:column; align-items:stretch; padding:0 16px 12px; gap:2px }
+  nav.primary .inner.open{ display:flex }
+  nav.primary a{ text-align:center }
+}
+
 /* Hero (home) */
 .hero{ text-align:center; padding:24px 0 8px }
 .hero h2{ font-size:clamp(22px,2.4vw,30px); margin:0 0 10px }
@@ -132,6 +147,17 @@ figure.inline figcaption{ padding:10px 12px; color:var(--muted) }
 .photo img{ width:100%; display:block; object-fit:cover }
 .inline{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
 
+/* Compact skill-icon grids (Skill.html) — 16 near-identical logo cards make for a
+   long single-column scroll on phones, so pack two per row and tighten the body. */
+@media (max-width:560px){
+  .grid-compact{ grid-template-columns:repeat(2,1fr); gap:10px }
+  .grid-compact .card .body{ padding:8px 10px }
+  .grid-compact .card h3{ font-size:15px; margin-bottom:2px }
+  .grid-compact .card p{ font-size:12px }
+  .grid-compact .tags{ gap:4px; margin-top:4px }
+  .grid-compact .tag{ font-size:10px; padding:2px 6px }
+}
+
 /* Gallery masonry + lightbox */
 .masonry{ column-count:1; column-gap:14px }
 @media (min-width:700px){ .masonry{ column-count:2 } }
@@ -145,6 +171,10 @@ figure.inline figcaption{ padding:10px 12px; color:var(--muted) }
 .lightbox img{ width:auto; height:auto; max-width:100%; max-height:100%; display:block; border-radius:12px }
 .lightbox .caption{ margin-top:8px; text-align:center; color:#eaeaea; font-size:14px }
 .lightbox .close{ position:absolute; top:-10px; right:-10px; background:#000; color:#fff; border:none; border-radius:999px; width:36px; height:36px; cursor:pointer; font-size:18px }
+@media (max-width:480px){
+  /* keep the close button reachable within the viewport on narrow phones */
+  .lightbox .close{ top:8px; right:8px }
+}
 
 /* Gallery grid (Hobbies.html) */
 .gallery{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) }

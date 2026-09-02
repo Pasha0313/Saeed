@@ -16,7 +16,8 @@
   </header>
 
   <nav class="primary" aria-label="Primary">
-    <div class="inner">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links">Menu</button>
+    <div class="inner" id="primary-nav-links">
       <a href="index.html">Home</a>
       <a href="Education.html">Education</a>
       <a href="CFD.html">CFD</a>
@@ -36,7 +37,7 @@
     <!-- Core programming languages -->
     <section aria-labelledby="prog-title">
       <div class="section-title"><h2 id="prog-title">Programming Languages</h2></div>
-      <div class="grid" role="list">
+      <div class="grid grid-compact" role="list">
         <article class="card" role="listitem">
           <img src="images/Cpp.png" alt="C++ logo" loading="lazy" decoding="async" />
           <div class="body">
@@ -83,7 +84,7 @@
     <!-- Simulation & CAE tools -->
     <section aria-labelledby="sim-title">
       <div class="section-title"><h2 id="sim-title">Simulation & CAE</h2></div>
-      <div class="grid" role="list">
+      <div class="grid grid-compact" role="list">
         <article class="card" role="listitem">
           <img src="images/Ansys.png" alt="ANSYS logo" loading="lazy" decoding="async" />
           <div class="body">
@@ -114,7 +115,7 @@
     <!-- Parallelism & acceleration -->
     <section aria-labelledby="hpc-title">
       <div class="section-title"><h2 id="hpc-title">Parallelism & Acceleration</h2></div>
-      <div class="grid" role="list">
+      <div class="grid grid-compact" role="list">
         <article class="card" role="listitem">
           <img src="images/mpi.jpg" alt="MPI logo" loading="lazy" decoding="async" />
           <div class="body">
@@ -153,7 +154,7 @@
     <!-- Visualization & legacy -->
     <section aria-labelledby="viz-title">
       <div class="section-title"><h2 id="viz-title">Visualization & Legacy</h2></div>
-      <div class="grid" role="list">
+      <div class="grid grid-compact" role="list">
         <article class="card" role="listitem">
           <img src="images/paraview.jpeg" alt="ParaView screenshot" loading="lazy" decoding="async" />
           <div class="body">
@@ -229,13 +230,6 @@
   </footer>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  <script src="assets/js/jquery.min.js" defer></script>
-  <script src="assets/js/jquery.dropotron.min.js" defer></script>
-  <script src="assets/js/jquery.scrolly.min.js" defer></script>
-  <script src="assets/js/jquery.scrollex.min.js" defer></script>
-  <script src="assets/js/browser.min.js" defer></script>
-  <script src="assets/js/breakpoints.min.js" defer></script>
-  <script src="assets/js/util.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/nav-toggle.js" defer></script>
 </body>
 </html>
