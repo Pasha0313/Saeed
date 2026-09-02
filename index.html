@@ -14,84 +14,9 @@
   <meta property="og:url" content="https://pasha0313.github.io/Saeed/" />
   <link rel="icon" href="images/favicon.png" />
 
-  <!-- Base styles (replace your scattered center styles) -->
-  <style>
-    :root {
-      --bg: #0b0c10;
-      --surface: #121317;
-      --text: #e6e6e6;
-      --muted: #a8adb7;
-      --brand: #4da3ff;
-      --brand-2: #7ef0c1;
-      --maxw: 1100px;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root { --bg:#ffffff; --surface:#f7f8fa; --text:#0c0d12; --muted:#5b616e; }
-    }
-
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
-      color:var(--text); background:linear-gradient(180deg,var(--bg),#0e1116 30%, var(--surface) 100%);
-    }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{ text-decoration:underline }
-
-    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
-    header.site{
-      display:grid; gap:1rem; place-items:center; padding:48px 0 24px;
-    }
-    .avatar{ border-radius: 20px; max-width: 220px; height:auto; box-shadow: 0 10px 40px rgba(0,0,0,.25)}
-    h1{font-size:clamp(28px,3vw,40px); margin:12px 0 4px; letter-spacing:0.2px}
-    .subtitle{color:var(--muted); margin:0}
-
-    nav.primary{ position: sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
-      background-color: color-mix(in oklab, var(--surface) 75%, transparent);
-      border-bottom:1px solid rgba(255,255,255,.06) }
-    nav.primary .inner{display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; justify-content:center; padding:10px}
-    nav.primary a{ padding:8px 12px; border-radius:12px }
-    nav.primary a:hover{ background:rgba(255,255,255,.06); text-decoration:none }
-
-    .hero{ text-align:center; padding: 24px 0 8px}
-    .hero h2{ font-size: clamp(22px, 2.4vw, 30px); margin:0 0 10px }
-    .hero p{ max-width: 850px; margin: 0 auto; color:var(--muted) }
-
-    .badges{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:16px 0}
-    .badge{ border:1px solid rgba(255,255,255,.12); color:var(--muted); padding:6px 10px; border-radius: 999px }
-
-    section{ padding: 40px 0 }
-    .grid{ display:grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); }
-
-    .card{ background: rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; transition: transform .2s ease, box-shadow .2s ease }
-    .card:hover{ transform: translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.2) }
-    .card img{ width:100%; aspect-ratio: 16/10; object-fit:cover; display:block }
-    .card .body{ padding:12px 14px }
-    .card h3{ margin:0 0 6px; font-size:18px }
-    .card p{ margin:0; color:var(--muted); font-size:14px }
-
-    .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin:0 0 10px }
-    .section-title h2{ font-size: clamp(22px,2.2vw,28px); margin:0 }
-
-    .pubs a{ display:block; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08); margin:10px 0; background: rgba(255,255,255,.02) }
-    .pubs a strong{ color: var(--text) }
-
-    footer.site{ padding: 30px 0 60px; color:var(--muted) }
-    .social{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap }
-    .social a{ padding:10px 12px; border:1px solid rgba(255,255,255,.12); border-radius:12px }
-
-    /* Accessibility helpers */
-    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden }
-    .skip-link:focus{ left:8px; top:8px; width:auto; height:auto; background:#000; color:#fff; padding:8px 10px; border-radius:8px; z-index:999 }
-
-    /* Responsive tweaks */
-    @media (min-width: 900px){ .hero p { font-size: 18px } }
-  </style>
-
-  <!-- Optional: your existing main.css AFTER our small base to allow overrides -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -108,6 +33,8 @@
       <a href="#publications">Publications</a>
       <a href="Education.html">Education</a>
       <a href="CFD.html">CFD</a>
+      <a href="AI-Projects.html">AI Projects</a>
+      <a href="Algo-Trading.html">Algo Trading</a>
       <a href="Skill.html">Skills</a>
       <a href="Hobbies.html">Hobbies</a>
       <a href="Gallery.html">Gallery</a>
@@ -218,6 +145,32 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-title">
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <div class="grid" role="list">
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3><a href="AI-Projects.html">AI & Machine Learning</a></h3>
+            <p>LLM agents in production, a hybrid retrieval QA engine built from scratch, applied forecasting, and
+              GPU-accelerated ML surrogates for scientific computing.</p>
+            <div class="meta"><span class="pill">LLM Agents</span><span class="pill">Retrieval & RAG</span><span class="pill">Forecasting</span></div>
+            <a class="btn" href="AI-Projects.html">Explore AI projects →</a>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3><a href="Algo-Trading.html">Algorithmic Trading</a></h3>
+            <p>A modular multi-asset systematic trading platform — 130+ strategies live on Interactive Brokers and
+              Binance, volatility modelling, walk-forward backtesting and options pricing.</p>
+            <div class="meta"><span class="pill">130+ Strategies</span><span class="pill">Live Execution</span><span class="pill">Backtesting</span></div>
+            <a class="btn" href="Algo-Trading.html">Explore trading platform →</a>
+          </div>
+        </article>
       </div>
     </section>
 

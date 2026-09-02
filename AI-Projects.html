@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Projects — Saeed Parvar</title>
+  <meta name="description" content="AI & Machine Learning projects by Saeed Parvar — LLM agents, hybrid retrieval, time-series forecasting, causal inference, and GPU-accelerated ML surrogates." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+  <header class="site" role="banner">
+    <h1>AI & Machine Learning Projects</h1>
+    <p>LLM agents, retrieval systems, forecasting, and ML-accelerated simulation.</p>
+  </header>
+
+  <nav class="primary" aria-label="Primary">
+    <div class="inner">
+      <a href="index.html">Home</a>
+      <a href="Education.html">Education</a>
+      <a href="CFD.html">CFD</a>
+      <a href="AI-Projects.html" aria-current="page">AI Projects</a>
+      <a href="Algo-Trading.html">Algo Trading</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Hobbies.html">Hobbies</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="BBQ.html">BBQ</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main role="main">
+    <p class="lede">Selected machine learning work spanning production LLM agents, retrieval systems built from
+      scratch, applied forecasting, and ML surrogates that accelerate first-principles numerical solvers.</p>
+
+    <div class="badges" aria-label="Areas of focus">
+      <span class="badge">LLM Agents</span>
+      <span class="badge">Retrieval & RAG</span>
+      <span class="badge">Time-Series Forecasting</span>
+      <span class="badge">Causal Inference</span>
+      <span class="badge">GPU / ML Surrogates</span>
+    </div>
+
+    <!-- LLM & Retrieval -->
+    <section class="section" aria-labelledby="llm-title">
+      <h2 id="llm-title">LLM & Retrieval Systems</h2>
+      <div class="grid" role="list">
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Adaptive LLM Tutoring Agent</h3>
+            <span class="role">Data Scientist (Contract) · Faculty AI, London — 2025</span>
+            <p>Deployed an adaptive LLM agent for Python education: generates a personalised learning roadmap per
+              student, tracks progress in real time, and produces structured reports for students, parents and
+              teachers — end-to-end from interaction data to deliverable output. Built the learning-map engine
+              sequencing lessons to each student's level, iterated across diverse learner profiles.</p>
+            <div class="meta"><span class="pill">LLM agent design</span><span class="pill">Personalisation</span><span class="pill">NLP</span><span class="pill">Structured reporting</span></div>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Hybrid Retrieval Document-QA System</h3>
+            <span class="role">Independent — from scratch, no retrieval frameworks</span>
+            <p>Built a retrieval-augmented QA engine combining BM25 lexical scoring with dense embedding similarity,
+              fused with reciprocal rank fusion, exposed through a Streamlit query interface — every scoring
+              component hand-written rather than assembled from a framework.</p>
+            <div class="meta"><span class="pill">BM25 (handwritten)</span><span class="pill">Sentence-Transformers</span><span class="pill">Reciprocal rank fusion</span><span class="pill">Streamlit</span></div>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Transformer-Based Market-Commentary Generator</h3>
+            <span class="role">Machine Learning Engineer (Freelance) — 2022 – Present</span>
+            <p>Full pipeline from source to generated text: automated scraping via Playwright (Cointelegraph,
+              Decrypt, CoinDesk), memory-efficient preprocessing with HuggingFace Datasets, and domain-specific
+              language-model fine-tuning for automated commentary.</p>
+            <div class="meta"><span class="pill">Playwright</span><span class="pill">HuggingFace Datasets</span><span class="pill">LLM fine-tuning</span><span class="pill">PyMuPDF</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Forecasting & applied ML -->
+    <section class="section" aria-labelledby="forecast-title">
+      <h2 id="forecast-title">Forecasting & Applied ML</h2>
+      <div class="grid" role="list">
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Multi-Model Demand Forecasting Suite</h3>
+            <span class="role">NYC Citibike — Machine Learning Engineer (Freelance)</span>
+            <p>Engineered a forecasting suite (ARIMA, Prophet, Exponential Smoothing, XGBoost, LSTM, Gaussian
+              Processes) for bike-share demand — a 12% accuracy improvement enabling a 25% cost reduction in fleet
+              redistribution.</p>
+            <div class="meta"><span class="pill">ARIMA</span><span class="pill">Prophet</span><span class="pill">LSTM</span><span class="pill">Gaussian Processes</span></div>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Customer Churn Prediction</h3>
+            <span class="role">Machine Learning Engineer (Freelance)</span>
+            <p>Random Forest, XGBoost and ANN churn models achieving a 15% improvement in retention-strategy
+              effectiveness, deployed as scoring APIs for downstream product use.</p>
+            <div class="meta"><span class="pill">Random Forest</span><span class="pill">XGBoost</span><span class="pill">ANN</span><span class="pill">Scoring APIs</span></div>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Causal Inference & Anomaly Detection</h3>
+            <span class="role">Data Scientist (Contract) · Extellio — 2025 – 2026</span>
+            <p>Built causal-inference models on large-scale behavioural data to estimate true effect beyond
+              correlational readouts, plus anomaly-detection systems flagging irregular user and traffic patterns;
+              designed A/B tests and automated analytics dashboards for product and engineering stakeholders.</p>
+            <div class="meta"><span class="pill">Causal inference</span><span class="pill">A/B testing</span><span class="pill">Anomaly detection</span><span class="pill">Dashboards</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Physics-informed ML -->
+    <section class="section" aria-labelledby="physics-title">
+      <h2 id="physics-title">Physics-Informed ML & Scientific Computing</h2>
+      <div class="grid" role="list">
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>GPU-Accelerated Thermodynamic (PVT) Engine</h3>
+            <span class="role">Research Scientist · Stealth-mode Startup, with L'CADAME/UFRJ — 2025 – Present</span>
+            <p>CUDA C++ (NVCC / C++17) engine from first principles: cubic equations of state (SRK/PR), multiphase
+              flash, stability analysis, phase-envelope construction, excess-Gibbs mixing rules (Huron-Vidal/NRTL).
+              Now developing ML surrogate models of the flash solver to cut iterative cost toward real-time flow
+              simulation — validated to production tolerances against a commercial reference; export pipelines feed
+              LedaFlow and PIPESIM for production, flow-assurance and CCUS applications.</p>
+            <div class="meta"><span class="pill">CUDA C++</span><span class="pill">Cubic EoS</span><span class="pill">ML surrogates</span><span class="pill">Multiphase flash</span></div>
+          </div>
+        </article>
+        <article class="card project" role="listitem">
+          <div class="body">
+            <h3>Reduced-Order Model for Boundary Layer Flow</h3>
+            <span class="role">Research Associate (Computational Scientist) · Imperial College London — 2023 – 2024</span>
+            <p>Regression + dimensionality reduction over DNS-LES boundary-layer data, cutting simulation time from
+              several weeks to a single day. Demonstrated a potential 10% drag-force reduction with direct
+              implications for aerospace fuel cost, contributing to peer-reviewed output.</p>
+            <div class="meta"><span class="pill">PCA</span><span class="pill">Regression</span><span class="pill">HPC</span><span class="pill">CFD</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <p class="center" style="margin-top:8px">
+      More background on <a href="Skill.html">skills & tools</a> · full history on
+      <a href="https://www.linkedin.com/in/saeed-parvar/" target="_blank" rel="noopener">LinkedIn</a> ·
+      code on <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <p>© <span id="y"></span> Saeed Parvar • <a href="https://www.researchgate.net/profile/Saeed-Parvar/research" target="_blank" rel="noopener">Publications</a> • <a href="https://github.com/Pasha0313" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

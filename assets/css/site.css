@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Saeed Parvar — shared site styles
+   Loaded after main.css on every page; overrides its light-forced body theme
+   with proper light/dark tokens (dark-first, matching the original homepage).
+   ========================================================================== */
+
+:root{
+  --bg:#0b0c10; --bg2:#0e1116; --surface: rgba(255,255,255,.03); --surface-2: rgba(255,255,255,.06);
+  --text:#e6e6e6; --muted:#a8adb7; --border: rgba(255,255,255,.08);
+  --brand:#4da3ff; --brand-2:#7ef0c1;
+  --radius:16px; --maxw:1160px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#ffffff; --bg2:#f7f8fa; --surface:#f7f8fa; --surface-2:#eef0f3;
+    --text:#0c0d12; --muted:#5b616e; --border: rgba(10,12,20,.12);
+  }
+}
+
+*,*::before,*::after{ box-sizing:border-box }
+html{ scroll-behavior:smooth }
+body{
+  margin:0; font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+  color:var(--text); background:linear-gradient(180deg,var(--bg),var(--bg2) 30%, var(--bg) 100%);
+}
+a{ color:var(--brand); text-decoration:none }
+a:hover{ text-decoration:underline }
+img{ max-width:100% }
+
+/* Accessibility */
+.skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden }
+.skip-link:focus{ left:8px; top:8px; width:auto; height:auto; background:#000; color:#fff; padding:8px 10px; border-radius:8px; z-index:999 }
+
+/* Layout containers */
+.container{ max-width:var(--maxw); margin:0 auto; padding:0 20px }
+main{ max-width:var(--maxw); margin:0 auto; padding:24px 16px 60px }
+
+/* Header (home) */
+header.site{ display:grid; gap:1rem; place-items:center; padding:48px 16px 24px; text-align:center }
+header.site .avatar{ border-radius:20px; max-width:220px; height:auto; box-shadow:0 10px 40px rgba(0,0,0,.25) }
+header.site h1{ font-size:clamp(28px,3vw,40px); margin:12px 0 4px; letter-spacing:.2px }
+header.site .subtitle{ color:var(--muted); margin:0 }
+header.site p{ margin:0; color:var(--muted) }
+
+/* Primary nav (every page) */
+nav.primary{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
+  background-color: color-mix(in oklab, var(--bg) 78%, transparent);
+  border-bottom:1px solid var(--border) }
+nav.primary .inner{ max-width:var(--maxw); margin:0 auto; padding:10px; display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center }
+nav.primary a{ padding:8px 12px; border-radius:10px; color:var(--text) }
+nav.primary a:hover{ background:var(--surface-2); text-decoration:none }
+nav.primary a[aria-current="page"]{ background:var(--surface-2); color:var(--brand); font-weight:600 }
+
+/* Hero (home) */
+.hero{ text-align:center; padding:24px 0 8px }
+.hero h2{ font-size:clamp(22px,2.4vw,30px); margin:0 0 10px }
+.hero p{ max-width:850px; margin:0 auto; color:var(--muted) }
+@media (min-width:900px){ .hero p{ font-size:18px } }
+
+.badges{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:16px 0 }
+.badge{ border:1px solid var(--border); color:var(--muted); padding:6px 10px; border-radius:999px }
+
+/* Page lede */
+.lede{ text-align:center; max-width:900px; margin:0 auto 22px; color:var(--muted) }
+
+/* Section headings */
+section{ padding:40px 0 }
+.section{ margin:30px 0 }
+.section h2{ font-size:clamp(20px,2vw,26px); margin:0 0 10px }
+.section p{ color:var(--muted); margin:0 0 14px }
+.section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin:26px 0 12px }
+.section-title h2{ font-size:clamp(22px,2.2vw,28px); margin:0 }
+
+/* Card grid (used everywhere: research, projects, hobbies, BBQ, skills…) */
+.grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) }
+.card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;
+  display:flex; flex-direction:column; transition:transform .2s ease, box-shadow .2s ease }
+.card:hover{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.2) }
+.card img, .card video{ width:100%; aspect-ratio:16/10; object-fit:cover; display:block }
+.card .body{ padding:12px 14px }
+.card h3{ margin:0 0 6px; font-size:18px }
+.card p{ margin:0; color:var(--muted); font-size:14px }
+
+.meta, .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+.pill, .tag{ border:1px solid var(--border); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted) }
+
+figure.inline{ margin:0; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden }
+figure.inline img{ width:100%; display:block; aspect-ratio:16/10; object-fit:cover }
+figure.inline figcaption{ padding:10px 12px; color:var(--muted) }
+
+.center{ text-align:center }
+
+/* Publications list (home) */
+.pubs a{ display:block; padding:12px 14px; border-radius:12px; border:1px solid var(--border); margin:10px 0; background:var(--surface) }
+.pubs a strong{ color:var(--text) }
+
+/* Category / skill blocks (Skill.html) */
+.category{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px }
+.category h3{ margin:0 0 10px; font-size:18px }
+.list{ display:flex; flex-wrap:wrap; gap:8px }
+
+/* Timeline (Education.html) */
+.cv{ text-align:center; margin:10px 0 26px }
+.cv a{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); text-decoration:none }
+.timeline{ position:relative; margin:24px 0 }
+.timeline::before{ content:""; position:absolute; left:calc(50% - 1px); top:0; bottom:0; width:2px; background:var(--border) }
+.entry{ display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:stretch; margin:0 0 26px }
+.entry:nth-child(even){ direction:rtl }
+.entry:nth-child(even) > *{ direction:ltr }
+.entry .card{ padding:14px; display:flex; gap:12px; flex-direction:row }
+.logo{ width:72px; height:72px; border-radius:12px; background:#111; flex:0 0 72px; display:grid; place-items:center; overflow:hidden }
+.logo img{ width:100%; height:100%; object-fit:contain }
+.sup{ margin-top:8px }
+@media (max-width:800px){
+  .timeline::before{ left:10px }
+  .entry{ grid-template-columns:1fr }
+}
+
+/* Contact page */
+.contact-grid{ display:grid; gap:18px; grid-template-columns:1.1fr .9fr }
+@media (max-width:900px){ .contact-grid{ grid-template-columns:1fr } }
+.panel{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:16px }
+.panel h2{ margin:0 0 10px; font-size:clamp(20px,2vw,26px) }
+.contact-list{ display:grid; gap:10px }
+.item{ display:flex; align-items:center; justify-content:space-between; gap:10px; border:1px solid var(--border); border-radius:12px; padding:10px 12px; background:var(--surface-2) }
+.item .left{ display:flex; gap:10px; align-items:center }
+.item .left strong{ display:block }
+.item small{ color:var(--muted) }
+.btn{ display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); text-decoration:none; color:var(--text) }
+.btn:hover{ background:var(--surface-2); text-decoration:none }
+.photo{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--border) }
+.photo img{ width:100%; display:block; object-fit:cover }
+.inline{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
+
+/* Gallery masonry + lightbox */
+.masonry{ column-count:1; column-gap:14px }
+@media (min-width:700px){ .masonry{ column-count:2 } }
+@media (min-width:1000px){ .masonry{ column-count:3 } }
+.tile{ display:block; break-inside:avoid; margin:0 0 14px; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--surface) }
+.tile img{ width:100%; height:auto; display:block }
+.tile figcaption{ padding:8px 10px; color:var(--muted); font-size:14px }
+.lightbox{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.75); z-index:1000 }
+.lightbox.open{ display:flex }
+.lightbox figure{ max-width:92vw; max-height:92vh; margin:0; position:relative }
+.lightbox img{ width:auto; height:auto; max-width:100%; max-height:100%; display:block; border-radius:12px }
+.lightbox .caption{ margin-top:8px; text-align:center; color:#eaeaea; font-size:14px }
+.lightbox .close{ position:absolute; top:-10px; right:-10px; background:#000; color:#fff; border:none; border-radius:999px; width:36px; height:36px; cursor:pointer; font-size:18px }
+
+/* Gallery grid (Hobbies.html) */
+.gallery{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) }
+.gallery figure{ margin:0; background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden }
+.gallery figure img{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block }
+.gallery figure figcaption{ padding:8px 10px; color:var(--muted); font-size:14px }
+
+/* BBQ tips */
+.tips{ margin-top:20px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:14px }
+.tips h2{ margin:0 0 10px; font-size:clamp(20px,2vw,26px) }
+.tips ul{ margin:0; padding-left:1.1rem; color:var(--muted) }
+
+/* Text-only project cards (AI-Projects.html, Algo-Trading.html, index.html feature cards) */
+.card.project .body{ padding:18px 20px }
+.card.project h3{ font-size:19px }
+.card.project .role{ display:block; color:var(--muted); font-size:13px; margin:-2px 0 8px }
+.card.project p{ font-size:15px }
+.card.project .btn{ margin-top:12px }
+
+/* Footer */
+footer.site{ text-align:center; color:var(--muted); padding:32px 0 60px }
+footer.site .social{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:14px }
+footer.site .social a{ padding:10px 12px; border:1px solid var(--border); border-radius:12px; color:var(--text) }
