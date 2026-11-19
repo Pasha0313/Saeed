@@ -20,4 +20,22 @@
       });
     });
   });
+
+  // Reveal major content groups as visitors move through long archive pages.
+  // Content remains visible when IntersectionObserver is unavailable.
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -40px" });
+
+    document.querySelectorAll("main > .section, main > .grid, main > .panel, main > .timeline, main > .gallery, main > .masonry, main > .lede, main > .cv").forEach(function (item) {
+      item.classList.add("page-reveal");
+      observer.observe(item);
+    });
+  }
 })();
